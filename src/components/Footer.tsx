@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
                 <source srcSet="/skornet-logo-dark.webp" type="image/webp" />
                 <img
                   src="/skornet-logo-dark.png"
-                  alt="Skornet"
+                  alt="SKORNET"
                   className="h-10 w-auto object-contain"
                   width="180"
                   height="42"

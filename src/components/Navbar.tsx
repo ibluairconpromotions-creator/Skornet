@@ -33,11 +33,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onJoinClick }) => {
         <a
           href="#"
           className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FE246E] rounded"
-          aria-label="Skornet Home"
+          aria-label="SKORNET Home"
         >
           <img
             src="/skornet-logo.png"
-            alt="Skornet"
+            alt="SKORNET"
             className="h-10 sm:h-12 w-auto object-contain"
             width="200"
             height="46"

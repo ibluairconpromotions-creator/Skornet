@@ -4,7 +4,7 @@
 
 ## Connecting the HVAC Service Ecosystem
 
-SKORNET Climate Systems Pvt. Ltd. is building a digital platform designed to connect the people, processes and operations that power the HVAC service industry. Our approach brings service demand, business operations, field activities and customer service delivery into one connected ecosystem.
+SKORNET is building a digital platform designed to connect the people, processes and operations that power the HVAC service industry. Our approach brings service demand, business operations, field activities and customer service delivery into one connected ecosystem.
 
 ## Bringing Every Stage of Service Together
 

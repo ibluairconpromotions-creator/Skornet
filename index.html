@@ -8,10 +8,18 @@
     <title>Skornet | Connecting the HVAC Service Ecosystem</title>
     <meta name="title" content="Skornet | Connecting the HVAC Service Ecosystem" />
     <meta name="description" content="Skornet is an industrial digital platform designed to connect HVAC service operations, businesses, certified field technicians, and customer service delivery across India." />
-    <meta name="keywords" content="HVAC service platform, HVAC technician registration India, commercial air conditioning maintenance, field service management HVAC, chiller maintenance, HVAC workforce coordination, Skornet" />
+    <meta name="keywords" content="HVAC service platform, HVAC technician registration India, commercial air conditioning maintenance, field service management HVAC, chiller maintenance, HVAC workforce coordination, Skornet, VRF maintenance India, AHU servicing" />
     <meta name="author" content="Skornet" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://skornet.in/" />
+    <link rel="alternate" hreflang="en-IN" href="https://skornet.in/" />
+    <link rel="alternate" hreflang="x-default" href="https://skornet.in/" />
+
+    <!-- Geographic & Regional Targeting (GEO) -->
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.placename" content="India" />
+    <meta name="target" content="all" />
+    <meta name="audience" content="HVAC Service Companies, Facility Managers, HVAC Field Technicians" />
 
     <!-- Google Search Favicon Specifications (48px multiples required for Googlebot-Image) -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -69,7 +77,7 @@
             "height": 512
           },
           "image": "https://skornet.in/Skornet.jpeg",
-          "description": "Skornet is building a digital platform designed to connect the people, processes and operations that power the HVAC service industry across India.",
+          "description": "Skornet is an industrial digital platform designed to connect HVAC service operations, businesses, certified field technicians, and customer service delivery across India.",
           "slogan": "Building the Digital Future of HVAC Service",
           "knowsAbout": [
             "HVAC Service Operations",
@@ -77,11 +85,22 @@
             "Field Workforce Coordination",
             "HVAC Technician Verification",
             "Chilled Water Systems",
-            "Air Handling Units (AHU)"
+            "Variable Refrigerant Flow (VRF)",
+            "Air Handling Units (AHU)",
+            "Preventive Maintenance Scheduling",
+            "Refrigerant Management",
+            "ISHRAE Standards"
           ],
           "areaServed": {
             "@type": "Country",
             "name": "India"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support & Verification",
+            "url": "https://forms.gle/J8Z223TY6iwuHT126",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
           }
         },
         {
@@ -105,7 +124,53 @@
           "about": {
             "@id": "https://skornet.in/#organization"
           },
-          "description": "Connecting HVAC service demand, business operations, field activities and customer service delivery into one connected ecosystem."
+          "description": "Connecting HVAC service demand, business operations, field activities and customer service delivery into one connected ecosystem.",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", "#hero-description", "#faq-heading"]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://skornet.in/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://skornet.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Service Workflow",
+              "item": "https://skornet.in/#workflow"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Connected Ecosystem",
+              "item": "https://skornet.in/#ecosystem"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Operational Insights",
+              "item": "https://skornet.in/#insights"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Join Network",
+              "item": "https://skornet.in/#technician-application"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "FAQ",
+              "item": "https://skornet.in/#faq"
+            }
+          ]
         },
         {
           "@type": "Service",
@@ -127,34 +192,50 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "What is Skornet?",
+              "name": "What is Skornet and what problems does it solve?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Skornet is an industrial digital platform designed to connect the people, processes, and operations that power the HVAC service industry across India — bringing service demand, business operations, field activities, and customer service delivery into one connected ecosystem."
+                "text": "Skornet is an industrial digital platform designed to connect the people, processes, and operations that power the HVAC service industry across India. It eliminates manual coordination bottlenecks, fragmented communication, and paper job sheets by bringing service demand, business operations, certified field technicians, and customer service delivery into one synchronized digital ecosystem."
               }
             },
             {
               "@type": "Question",
-              "name": "How can HVAC technicians join the Skornet network?",
+              "name": "Who can join the Skornet technician and contractor network?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Certified HVAC technicians, engineers, and service contractors can join the Skornet network by submitting their contact information, service area, skills, and equipment certifications through the official Skornet verification onboarding form."
+                "text": "Certified HVAC field technicians, maintenance engineers, HVAC service contractors, and facility engineering teams across India can join the network. Whether you are an experienced chiller plant specialist, VRV/VRF technician, or commercial ductable AC installer, Skornet provides direct access to verified service calls and structured operational workflows."
               }
             },
             {
               "@type": "Question",
-              "name": "What types of HVAC equipment does the Skornet ecosystem support?",
+              "name": "What types of HVAC equipment and commercial systems are supported?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Skornet supports commercial and industrial HVAC equipment operations including central chiller plants, VRV/VRF systems, Air Handling Units (AHUs), Fan Coil Units (FCUs), rooftop packaged units, and ducted split systems."
+                "text": "Skornet supports all tiers of commercial, industrial, and residential HVAC infrastructure including water-cooled and air-cooled chillers, Variable Refrigerant Flow (VRF/VRV) systems, Air Handling Units (AHUs), Fan Coil Units (FCUs), rooftop packaged units, cooling towers, ventilation exhausts, and precision air conditioning (PAC) units."
               }
             },
             {
               "@type": "Question",
-              "name": "How does Skornet improve HVAC service operations?",
+              "name": "How does the 5-stage digital service workflow operate?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Skornet brings every stage of HVAC service into a structured digital workflow — from request logging and technician assignment to real-time status tracking, digital inspection logs, customer sign-off, and operational performance insights."
+                "text": "The workflow connects: (1) Service Request Management with centralized intake, (2) Intelligent Technician Work Assignment based on skill and location, (3) Synchronized Appointment Scheduling across dispatch and facility managers, (4) Real-Time Field Activity Tracking with attendance and job milestones, and (5) Permanent Digital Service Records with sign-offs and maintenance history."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What verification details are required for technician onboarding?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To ensure verified service quality and customer safety, onboarding technicians provide: Full Legal Name, Verified Phone Number, Aadhaar Identity Verification (held strictly confidential), Operational Coverage Address, Years of Industry Experience, Specialized Skill Matrix, Compensation Expectations, and Document/Certificate Upload."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Skornet ensure data security and operational privacy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Skornet employs enterprise-grade data protection standards. All identity records, verification details, facility addresses, and equipment service logs are securely stored and accessible strictly for verified operational dispatch, ensuring full compliance and customer confidentiality."
               }
             }
           ]
@@ -169,18 +250,22 @@
       <header>
         <nav aria-label="Main Navigation">
           <a href="/">Skornet</a>
-          <a href="https://forms.gle/J8Z223TY6iwuHT126">Join the Network</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#ecosystem">Ecosystem</a>
+          <a href="#insights">Insights</a>
+          <a href="#faq">FAQ</a>
+          <a href="#technician-application">Join the Network</a>
         </nav>
       </header>
       <main>
         <section>
           <h1>Connecting the HVAC Service Ecosystem</h1>
-          <p>
+          <p id="hero-description">
             SKORNET is building a digital platform designed to connect the people, processes and operations that power the HVAC service industry — bringing service demand, business operations, field activities and customer service delivery into one connected ecosystem.
           </p>
           <a href="https://forms.gle/J8Z223TY6iwuHT126">Join the SKORNET Network</a>
         </section>
-        <section>
+        <section id="workflow">
           <h2>Bringing Every Stage of Service Together</h2>
           <p>
             HVAC service operations often involve multiple stakeholders, communication channels and manual processes. SKORNET aims to bring these activities into a more structured digital workflow — from managing service requests and assigning work to coordinating appointments, tracking field progress and maintaining service records.
@@ -189,13 +274,13 @@
             By bringing essential operational information together, the platform helps service businesses gain better visibility into day-to-day activities and coordinate work across their operations.
           </p>
         </section>
-        <section>
+        <section id="ecosystem">
           <h2>Connecting Businesses, Field Teams and Customers</h2>
           <p>
             SKORNET is designed to support the connection between service companies, their workforce and customer service delivery. With capabilities for service-call management, workforce coordination, digital records, attendance and field activity tracking, the platform helps organise information that businesses need to manage their service operations.
           </p>
         </section>
-        <section>
+        <section id="insights">
           <h2>Turning Operations into Useful Insights</h2>
           <p>
             Beyond coordinating daily activities, SKORNET aims to make operational information more accessible and useful. Structured service records and field activity data can help businesses review workflows, understand service progress and make more informed operational decisions.
@@ -207,28 +292,36 @@
           </blockquote>
           <p>Building the Digital Future of HVAC Service.</p>
         </section>
-        <section>
+        <section id="technician-application">
           <h2>Join the SKORNET Network</h2>
           <p>Share your details, experience and skills to connect with the SKORNET HVAC service ecosystem.</p>
           <a href="https://forms.gle/J8Z223TY6iwuHT126">Submit Your Details</a>
         </section>
-        <section>
-          <h2>Frequently Asked Questions</h2>
+        <section id="faq">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
           <article>
-            <h3>What is Skornet?</h3>
-            <p>Skornet is an industrial digital platform designed to connect the people, processes, and operations that power the HVAC service industry across India — bringing service demand, business operations, field activities, and customer service delivery into one connected ecosystem.</p>
+            <h3>What is Skornet and what problems does it solve?</h3>
+            <p>Skornet is an industrial digital platform designed to connect the people, processes, and operations that power the HVAC service industry across India. It eliminates manual coordination bottlenecks, fragmented communication, and paper job sheets by bringing service demand, business operations, certified field technicians, and customer service delivery into one synchronized digital ecosystem.</p>
           </article>
           <article>
-            <h3>How can HVAC technicians join the Skornet network?</h3>
-            <p>Certified HVAC technicians, engineers, and service contractors can join the Skornet network by submitting their contact information, service area, skills, and equipment certifications through the official Skornet verification onboarding form.</p>
+            <h3>Who can join the Skornet technician and contractor network?</h3>
+            <p>Certified HVAC field technicians, maintenance engineers, HVAC service contractors, and facility engineering teams across India can join the network. Whether you are an experienced chiller plant specialist, VRV/VRF technician, or commercial ductable AC installer, Skornet provides direct access to verified service calls and structured operational workflows.</p>
           </article>
           <article>
-            <h3>What types of HVAC equipment does the Skornet ecosystem support?</h3>
-            <p>Skornet supports commercial and industrial HVAC equipment operations including central chiller plants, VRV/VRF systems, Air Handling Units (AHUs), Fan Coil Units (FCUs), rooftop packaged units, and ducted split systems.</p>
+            <h3>What types of HVAC equipment and commercial systems are supported?</h3>
+            <p>Skornet supports all tiers of commercial, industrial, and residential HVAC infrastructure including water-cooled and air-cooled chillers, Variable Refrigerant Flow (VRF/VRV) systems, Air Handling Units (AHUs), Fan Coil Units (FCUs), rooftop packaged units, cooling towers, ventilation exhausts, and precision air conditioning (PAC) units.</p>
           </article>
           <article>
-            <h3>How does Skornet improve HVAC service operations?</h3>
-            <p>Skornet brings every stage of HVAC service into a structured digital workflow — from request logging and technician assignment to real-time status tracking, digital inspection logs, customer sign-off, and operational performance insights.</p>
+            <h3>How does the 5-stage digital service workflow operate?</h3>
+            <p>The workflow connects: (1) Service Request Management with centralized intake, (2) Intelligent Technician Work Assignment based on skill and location, (3) Synchronized Appointment Scheduling across dispatch and facility managers, (4) Real-Time Field Activity Tracking with attendance and job milestones, and (5) Permanent Digital Service Records with sign-offs and maintenance history.</p>
+          </article>
+          <article>
+            <h3>What verification details are required for technician onboarding?</h3>
+            <p>To ensure verified service quality and customer safety, onboarding technicians provide: Full Legal Name, Verified Phone Number, Aadhaar Identity Verification (held strictly confidential), Operational Coverage Address, Years of Industry Experience, Specialized Skill Matrix, Compensation Expectations, and Document/Certificate Upload.</p>
+          </article>
+          <article>
+            <h3>How does Skornet ensure data security and operational privacy?</h3>
+            <p>Skornet employs enterprise-grade data protection standards. All identity records, verification details, facility addresses, and equipment service logs are securely stored and accessible strictly for verified operational dispatch, ensuring full compliance and customer confidentiality.</p>
           </article>
         </section>
       </main>

@@ -31,6 +31,15 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
+          {/* Quick Anchor Links for SEO & Navigation */}
+          <nav aria-label="Footer Navigation" className="flex flex-wrap items-center gap-6 text-xs text-[#9CA3AF]">
+            <a href="#workflow" className="hover:text-white transition-colors">Workflow</a>
+            <a href="#ecosystem" className="hover:text-white transition-colors">Ecosystem</a>
+            <a href="#insights" className="hover:text-white transition-colors">Insights</a>
+            <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+            <a href="#technician-application" className="hover:text-[#FE246E] transition-colors font-medium">Join Network</a>
+          </nav>
+
           {/* Quick Back to Top Action */}
           <div>
             <button

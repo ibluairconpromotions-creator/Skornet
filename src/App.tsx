@@ -6,6 +6,7 @@ import { ConnectedEcosystem } from './components/ConnectedEcosystem';
 import { OperationsInsights } from './components/OperationsInsights';
 import { BrandStatement } from './components/BrandStatement';
 import { FormSection } from './components/FormSection';
+import { FAQSection } from './components/FAQSection';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
@@ -49,6 +50,9 @@ export const App: React.FC = () => {
 
         {/* Section 7: Technician Information Collection CTA (Google Form) */}
         <FormSection />
+
+        {/* Section 8: Frequently Asked Questions (SEO, AEO, and Knowledge Base) */}
+        <FAQSection />
       </main>
 
       {/* Section 8: Professional Minimal Footer */}

@@ -44,6 +44,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onJoinClick }) => {
           />
         </a>
 
+        {/* Desktop Anchor Navigation */}
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#4A4A4A]" aria-label="Main Navigation">
+          <a href="#workflow" className="hover:text-[#FE246E] transition-colors">Workflow</a>
+          <a href="#ecosystem" className="hover:text-[#FE246E] transition-colors">Ecosystem</a>
+          <a href="#insights" className="hover:text-[#FE246E] transition-colors">Insights</a>
+          <a href="#faq" className="hover:text-[#FE246E] transition-colors">FAQ</a>
+        </nav>
+
         {/* Primary Action Button: Smooth scroll to application */}
         <div className="flex items-center">
           <button

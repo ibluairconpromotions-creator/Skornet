@@ -50,8 +50,8 @@ export const ServiceWorkflow: React.FC = () => {
         {/* Editorial Split Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          {/* Left Column: Image Anchor */}
-          <div className="lg:col-span-6 sticky top-28">
+          {/* Left Column: Image Anchor (Static on mobile, sticky only on desktop lg+) */}
+          <div className="lg:col-span-6 static lg:sticky lg:top-28">
             <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] shadow-[0_10px_30px_rgba(0,0,0,0.05)] bg-white group">
               <picture>
                 <source srcSet="/images/service-operations.webp" type="image/webp" />

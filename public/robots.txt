@@ -1,4 +1,31 @@
+# Allow all search engines and AI answer engines
 User-agent: *
 Allow: /
 
-Sitemap: https://skornet.com/sitemap.xml
+# Googlebot specific directives
+User-agent: Googlebot
+Allow: /
+Allow: /favicon.ico
+Allow: /favicon-*.png
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.webp$
+
+# Googlebot Image Crawler for Favicon and Rich Search Results
+User-agent: Googlebot-Image
+Allow: /
+Allow: /favicon.ico
+Allow: /favicon-*.png
+Allow: /skornet-favicon.png
+
+# AI Answer Engines (AEO & GEO Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://skornet.in/sitemap.xml

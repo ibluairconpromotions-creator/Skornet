@@ -6,6 +6,7 @@
 export const SITE_CONFIG = {
   companyName: 'Skornet',
   brandName: 'Skornet',
+  domain: 'https://skornet.in',
   tagline: 'Skornet — Connect. Verify. Manage. Grow.',
   subTagline: 'Building the Digital Future of HVAC Service.',
   brandColors: {

@@ -3,9 +3,10 @@ import { ArrowRight } from 'lucide-react';
 
 interface NavbarProps {
   onJoinClick: () => void;
+  onHomeClick?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onJoinClick }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onJoinClick, onHomeClick }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -16,6 +17,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onJoinClick }) => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (onHomeClick) {
+      e.preventDefault();
+      onHomeClick();
+    }
+  };
 
   return (
     <header
@@ -28,7 +36,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onJoinClick }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* SKORNET Official Logo */}
         <a
-          href="#"
+          href="/"
+          onClick={handleLogoClick}
           className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F20A78] rounded"
           aria-label="SKORNET - Connecting the HVAC Service Ecosystem"
         >

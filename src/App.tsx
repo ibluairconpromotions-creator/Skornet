@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { IndustryChallenges } from './components/IndustryChallenges';
@@ -12,9 +12,58 @@ import { DataTrust } from './components/DataTrust';
 import { FAQSection } from './components/FAQSection';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
 
 export const App: React.FC = () => {
+  const [currentPath, setCurrentPath] = useState<string>(() => {
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname.toLowerCase().replace(/\/$/, '');
+      if (path === '/privacy-policy' || path === '/privacy' || window.location.hash === '#privacy-policy') {
+        return '/privacy-policy';
+      }
+    }
+    return '/';
+  });
+
+  useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname.toLowerCase().replace(/\/$/, '');
+      if (path === '/privacy-policy' || path === '/privacy' || window.location.hash === '#privacy-policy') {
+        setCurrentPath('/privacy-policy');
+      } else {
+        setCurrentPath('/');
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  useEffect(() => {
+    if (currentPath === '/') {
+      document.title = 'SKORNET — Connecting the HVAC Service Ecosystem';
+    }
+  }, [currentPath]);
+
+  const navigateTo = (path: string) => {
+    if (typeof window !== 'undefined') {
+      window.history.pushState({}, '', path);
+      setCurrentPath(path);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const scrollToApplication = () => {
+    if (currentPath !== '/') {
+      navigateTo('/');
+      setTimeout(() => {
+        const el = document.getElementById('technician-application');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      return;
+    }
     const el = document.getElementById('technician-application');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
@@ -28,10 +77,22 @@ export const App: React.FC = () => {
     }
   };
 
+  if (currentPath === '/privacy-policy') {
+    return (
+      <PrivacyPolicy
+        onHomeClick={() => navigateTo('/')}
+        onJoinClick={scrollToApplication}
+      />
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Navigation */}
-      <Navbar onJoinClick={scrollToApplication} />
+      <Navbar
+        onJoinClick={scrollToApplication}
+        onHomeClick={() => navigateTo('/')}
+      />
 
       <main className="flex-grow">
         {/* Section 1: Hero */}
@@ -71,8 +132,11 @@ export const App: React.FC = () => {
         <FinalCTA />
       </main>
 
-      {/* Section 12: Footer */}
-      <Footer />
+      {/* Section 12: Footer with Platform, Resources, Legal & Contact Menus */}
+      <Footer
+        onPrivacyClick={() => navigateTo('/privacy-policy')}
+        onJoinClick={scrollToApplication}
+      />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Mail, ExternalLink, Shield, ChevronRight } from 'lucide-react';
+import { ArrowUp, Mail, ExternalLink, ChevronRight } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 
 const currentYear = new Date().getFullYear();
@@ -43,11 +43,6 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onSecurityClick 
             <div className="pt-1 flex items-center gap-2 text-xs font-semibold text-[#F20A78]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#F20A78]" />
               <span>Connect • Verify • Manage • Grow</span>
-            </div>
-
-            <div className="text-xs text-slate-400 pt-1 flex items-center gap-1.5">
-              <Shield className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-              <span>Verified HVAC Service Network • India</span>
             </div>
           </div>
 

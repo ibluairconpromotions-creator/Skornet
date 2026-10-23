@@ -13,26 +13,36 @@ import { FAQSection } from './components/FAQSection';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
+import { SecurityGovernance } from './components/SecurityGovernance';
+
+const resolveRoute = (pathname: string, hash: string): string => {
+  const path = pathname.toLowerCase().replace(/\/$/, '');
+  if (path === '/privacy-policy' || path === '/privacy' || hash === '#privacy-policy') {
+    return '/privacy-policy';
+  }
+  if (
+    path === '/security-governance' ||
+    path === '/security' ||
+    path === '/governance' ||
+    hash === '#security-governance' ||
+    hash === '#security'
+  ) {
+    return '/security-governance';
+  }
+  return '/';
+};
 
 export const App: React.FC = () => {
   const [currentPath, setCurrentPath] = useState<string>(() => {
     if (typeof window !== 'undefined') {
-      const path = window.location.pathname.toLowerCase().replace(/\/$/, '');
-      if (path === '/privacy-policy' || path === '/privacy' || window.location.hash === '#privacy-policy') {
-        return '/privacy-policy';
-      }
+      return resolveRoute(window.location.pathname, window.location.hash);
     }
     return '/';
   });
 
   useEffect(() => {
     const handlePopState = () => {
-      const path = window.location.pathname.toLowerCase().replace(/\/$/, '');
-      if (path === '/privacy-policy' || path === '/privacy' || window.location.hash === '#privacy-policy') {
-        setCurrentPath('/privacy-policy');
-      } else {
-        setCurrentPath('/');
-      }
+      setCurrentPath(resolveRoute(window.location.pathname, window.location.hash));
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -48,7 +58,7 @@ export const App: React.FC = () => {
   const navigateTo = (path: string) => {
     if (typeof window !== 'undefined') {
       window.history.pushState({}, '', path);
-      setCurrentPath(path);
+      setCurrentPath(resolveRoute(path, ''));
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -82,6 +92,17 @@ export const App: React.FC = () => {
       <PrivacyPolicy
         onHomeClick={() => navigateTo('/')}
         onJoinClick={scrollToApplication}
+        onSecurityClick={() => navigateTo('/security-governance')}
+      />
+    );
+  }
+
+  if (currentPath === '/security-governance') {
+    return (
+      <SecurityGovernance
+        onHomeClick={() => navigateTo('/')}
+        onJoinClick={scrollToApplication}
+        onPrivacyClick={() => navigateTo('/privacy-policy')}
       />
     );
   }
@@ -132,10 +153,10 @@ export const App: React.FC = () => {
         <FinalCTA />
       </main>
 
-      {/* Section 12: Footer with Platform, Resources, Legal & Contact Menus */}
+      {/* Section 12: Footer with Resources & Legal and Contact */}
       <Footer
         onPrivacyClick={() => navigateTo('/privacy-policy')}
-        onJoinClick={scrollToApplication}
+        onSecurityClick={() => navigateTo('/security-governance')}
       />
     </div>
   );

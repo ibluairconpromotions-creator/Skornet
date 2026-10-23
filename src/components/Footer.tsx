@@ -6,30 +6,23 @@ const currentYear = new Date().getFullYear();
 
 interface FooterProps {
   onPrivacyClick?: () => void;
-  onJoinClick?: () => void;
+  onSecurityClick?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onJoinClick }) => {
+export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onSecurityClick }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleNavClick = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   return (
     <footer className="bg-[#0B162B] text-white border-t border-slate-800/80 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Main Footer Grid with Menus */}
+        {/* Main Footer Grid: Brand, Resources & Legal, Contact */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
           
-          {/* Brand Info & Tagline (4 cols) */}
-          <div className="sm:col-span-2 lg:col-span-4 space-y-4">
+          {/* Brand Info & Tagline (5 cols) */}
+          <div className="sm:col-span-2 lg:col-span-5 space-y-4">
             <a href="/" className="inline-block" aria-label="SKORNET Home">
               <picture>
                 <source srcSet="/skornet-logo-dark.webp" type="image/webp" />
@@ -58,81 +51,12 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onJoinClick }) =
             </div>
           </div>
 
-          {/* Navigation Menu: Platform (3 cols) */}
+          {/* Navigation Menu: Resources & Legal (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-poppins uppercase tracking-wider text-slate-400 font-bold">
-              Platform
-            </h4>
-            <ul className="space-y-2 text-sm text-slate-300">
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleNavClick('challenges')}
-                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 text-left cursor-pointer"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
-                  <span>The Industry Challenge</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleNavClick('introducing-skornet')}
-                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 text-left cursor-pointer"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
-                  <span>Introducing SKORNET</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleNavClick('how-it-works')}
-                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 text-left cursor-pointer"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
-                  <span>How SKORNET Works</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleNavClick('capabilities')}
-                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 text-left cursor-pointer"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
-                  <span>Platform Capabilities</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleNavClick('stakeholders')}
-                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 text-left cursor-pointer"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
-                  <span>Stakeholder Benefits</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleNavClick('equipment')}
-                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 text-left cursor-pointer"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
-                  <span>HVAC Equipment & Applications</span>
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          {/* Navigation Menu: Resources & Legal (2 cols) */}
-          <div className="lg:col-span-2 space-y-3">
             <h4 className="text-xs font-poppins uppercase tracking-wider text-slate-400 font-bold">
               Resources & Legal
             </h4>
-            <ul className="space-y-2 text-sm text-slate-300">
+            <ul className="space-y-2.5 text-sm text-slate-300">
               <li>
                 <a
                   href="/privacy-policy"
@@ -149,46 +73,25 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onJoinClick }) =
                 </a>
               </li>
               <li>
-                <button
-                  type="button"
-                  onClick={() => handleNavClick('data-trust')}
-                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 text-left cursor-pointer"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
-                  <span>Security & Governance</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleNavClick('faq')}
-                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 text-left cursor-pointer"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
-                  <span>Frequently Asked Questions</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (onJoinClick) {
-                      onJoinClick();
-                    } else {
-                      window.open(SITE_CONFIG.googleForm.directUrl, '_blank', 'noopener,noreferrer');
+                <a
+                  href="/security-governance"
+                  onClick={(e) => {
+                    if (onSecurityClick) {
+                      e.preventDefault();
+                      onSecurityClick();
                     }
                   }}
-                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 text-left cursor-pointer"
+                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 cursor-pointer font-medium text-slate-200"
                 >
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
-                  <span>Technician Registration</span>
-                </button>
+                  <ChevronRight className="w-3.5 h-3.5 text-[#F20A78]" />
+                  <span>Security & Governance</span>
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact (3 cols) */}
-          <div className="lg:col-span-3 space-y-3">
+          {/* Contact & Network (4 cols) */}
+          <div className="lg:col-span-4 space-y-3">
             <h4 className="text-xs font-poppins uppercase tracking-wider text-slate-400 font-bold">
               Contact & Network
             </h4>
@@ -217,15 +120,13 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onJoinClick }) =
 
         </div>
 
-        {/* Bottom Bar: Copyright, Tagline, Privacy Link, Back-to-Top */}
+        {/* Bottom Bar: Copyright, Tagline, Legal Links, Back-to-Top */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            &copy; {currentYear} <span className="font-semibold text-slate-200">SKORNET</span>. All rights reserved.
+            &copy; {currentYear} <span className="font-semibold text-slate-200">SKORNET</span>. All rights reserved. Designed by Popcix Creative Studio
           </div>
 
-          <div className="flex items-center gap-4 text-slate-400">
-            <span>One Platform for Every Technician, Service Call and Business Operation.</span>
-            <span className="hidden sm:inline text-slate-600">•</span>
+          <div className="flex items-center gap-3 text-slate-400">
             <a
               href="/privacy-policy"
               onClick={(e) => {
@@ -237,6 +138,19 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onJoinClick }) =
               className="hover:text-[#F20A78] transition-colors underline underline-offset-2 cursor-pointer"
             >
               Privacy Policy
+            </a>
+            <span className="text-slate-600">•</span>
+            <a
+              href="/security-governance"
+              onClick={(e) => {
+                if (onSecurityClick) {
+                  e.preventDefault();
+                  onSecurityClick();
+                }
+              }}
+              className="hover:text-[#F20A78] transition-colors underline underline-offset-2 cursor-pointer"
+            >
+              Security & Governance
             </a>
           </div>
 

@@ -7,9 +7,10 @@ const currentYear = new Date().getFullYear();
 interface PrivacyPolicyProps {
   onHomeClick: () => void;
   onJoinClick?: () => void;
+  onSecurityClick?: () => void;
 }
 
-export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onHomeClick, onJoinClick }) => {
+export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onHomeClick, onJoinClick, onSecurityClick }) => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
     document.title = 'Privacy Policy | SKORNET - Connected HVAC Ecosystem';
@@ -332,7 +333,7 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onHomeClick, onJoi
           </article>
 
           {/* Return CTA */}
-          <div className="mt-12 text-center">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={onHomeClick}
               type="button"
@@ -341,6 +342,15 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onHomeClick, onJoi
               <ArrowLeft className="w-4 h-4 text-[#F20A78]" />
               <span>Return to SKORNET Home</span>
             </button>
+            {onSecurityClick && (
+              <button
+                onClick={onSecurityClick}
+                type="button"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-700 hover:text-slate-900 text-sm font-semibold transition-all cursor-pointer shadow-sm"
+              >
+                <span>View Security & Governance</span>
+              </button>
+            )}
           </div>
 
         </div>
@@ -350,7 +360,7 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onHomeClick, onJoi
       <footer className="bg-[#0B162B] text-white border-t border-slate-800 py-8 text-xs text-slate-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            &copy; {currentYear} <span className="font-semibold text-slate-200">SKORNET</span>. All rights reserved.
+            &copy; {currentYear} <span className="font-semibold text-slate-200">SKORNET</span>. All rights reserved. Designed by Popcix Creative Studio
           </div>
           <div>
             <span>Connecting the HVAC Service Ecosystem across India.</span>

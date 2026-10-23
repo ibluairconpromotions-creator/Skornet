@@ -108,7 +108,7 @@ export const App: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-[#0B162B]">
       {/* Navigation */}
       <Navbar
         onJoinClick={scrollToApplication}

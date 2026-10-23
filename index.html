@@ -51,14 +51,43 @@
     <meta property="twitter:description" content="Discover SKORNET, a digital platform connecting HVAC service businesses and technicians through verification, service-call management, GPS-based field activity and digital service records." />
     <meta property="twitter:image" content="https://skornet.in/images/skornet-hero.webp" />
 
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#0d172a" />
-    <meta name="msapplication-TileColor" content="#0d172a" />
+    <!-- Theme Color matching Brand Navy -->
+    <meta name="theme-color" content="#0B162B" />
+    <meta name="msapplication-TileColor" content="#0B162B" />
 
-    <!-- Google Fonts Preconnect and Load -->
+    <!-- Critical Performance Preconnects & High-Priority Asset Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="/images/skornet-hero-bg.webp" type="image/webp" fetchpriority="high" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Critical Synchronous CSS: Eliminates Initial White Flash & Guarantees Immediate Navy Paint -->
+    <style>
+      :root {
+        --brand-navy: #0B162B;
+        --brand-pink: #F20A78;
+        --brand-blue: #249FE8;
+      }
+      html {
+        background-color: #0B162B;
+        color: #ffffff;
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0B162B;
+        color: #ffffff;
+        font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+      #root {
+        min-height: 100vh;
+        background-color: #0B162B;
+      }
+    </style>
 
     <!-- Comprehensive AEO, GEO & JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -298,13 +327,16 @@
     }
     </script>
   </head>
-  <body class="bg-white text-[#4A4A4A] font-sans antialiased selection:bg-[#FE246E] selection:text-white">
-    <!-- Prerendered Semantic HTML Foundation for Search & AI Answer Engines -->
-    <div id="root">
+  <body class="bg-[#0B162B] text-white font-sans antialiased selection:bg-[#F20A78] selection:text-white" style="background-color: #0B162B; color: #ffffff; margin: 0;">
+    <!-- React Root Mount Node -->
+    <div id="root"></div>
+
+    <!-- Prerendered Semantic HTML Fallback for Non-JavaScript Crawlers -->
+    <noscript>
       <header>
         <nav aria-label="Main Navigation">
           <a href="/">SKORNET</a>
-          <a href="#technician-application">Join Network</a>
+          <a href="https://forms.gle/J8Z223TY6iwuHT126">Join Network</a>
         </nav>
       </header>
       <main>
@@ -419,9 +451,9 @@
         </section>
       </main>
       <footer>
-        <p>&copy; SKORNET. All rights reserved.</p>
+        <p>&copy; SKORNET. All rights reserved. Designed by Popcix Creative Studio</p>
       </footer>
-    </div>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

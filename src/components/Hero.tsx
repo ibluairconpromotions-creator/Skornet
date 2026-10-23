@@ -73,17 +73,17 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
         <div className="max-w-xl lg:max-w-[36rem] xl:max-w-[40rem] py-8 sm:py-12 lg:py-24 xl:py-28">
           
           {/* Large, bold, highly readable H1 headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[3.25rem] font-extrabold text-white tracking-tight leading-[1.12] mb-5 animate-fade-in-up drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[3.25rem] font-extrabold text-white tracking-tight leading-[1.12] mb-5 drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
             Connecting the HVAC Service Ecosystem
           </h1>
 
           {/* Supporting paragraph */}
-          <p className="text-base sm:text-lg text-slate-200 leading-relaxed mb-8 max-w-xl font-normal animate-fade-in-up delay-100 drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">
+          <p className="text-base sm:text-lg text-slate-200 leading-relaxed mb-8 max-w-xl font-normal drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">
             One connected platform for HVAC technicians, service businesses and field operations. Verify technician information, coordinate service calls and improve workforce visibility through structured digital workflows.
           </p>
 
           {/* Primary and secondary CTA buttons */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 animate-fade-in-up delay-200">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <a
               href={SITE_CONFIG.googleForm.directUrl}
               target="_blank"
@@ -105,7 +105,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           </div>
 
           {/* Restrained feature highlights bar */}
-          <div className="mt-10 pt-6 border-t border-slate-800/90 grid grid-cols-3 gap-4 max-w-lg animate-fade-in-up delay-300">
+          <div className="mt-10 pt-6 border-t border-slate-800/90 grid grid-cols-3 gap-4 max-w-lg">
             <div className="flex items-start gap-2">
               <ShieldCheck className="w-4 h-4 text-[#F20A78] shrink-0 mt-0.5" />
               <div>

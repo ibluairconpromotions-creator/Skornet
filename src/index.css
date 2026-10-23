@@ -1,15 +1,27 @@
 @import "tailwindcss";
 
+@theme {
+  --font-mono: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-mono,
+.font-poppins {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
 @layer base {
   :root {
-    --brand-pink: #fe246e;
-    --brand-pink-hover: #e0155b;
+    --brand-navy: #0b162b;
+    --brand-pink: #f20a78;
+    --brand-pink-hover: #d8086a;
+    --brand-blue: #249fe8;
     --brand-charcoal: #4a4a4a;
     --brand-dark: #1a1a1a;
     --brand-muted: #6b7280;
     --brand-border: #e5e7eb;
-    --brand-bg-subtle: #f9fafb;
-    --brand-bg-accent: #f4f5f7;
+    --brand-bg-subtle: #f4f6fa;
+    --brand-bg-white: #ffffff;
   }
 
   html {
@@ -69,22 +81,22 @@
 
 /* Micro-interaction for buttons */
 .btn-primary {
-  background-color: #fe246e;
+  background-color: #f20a78;
   color: #ffffff;
   font-weight: 600;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(254, 36, 110, 0.25);
+  box-shadow: 0 4px 14px rgba(242, 10, 120, 0.28);
 }
 
 .btn-primary:hover {
-  background-color: #e0155b;
+  background-color: #d8086a;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(254, 36, 110, 0.35);
+  box-shadow: 0 6px 20px rgba(242, 10, 120, 0.38);
 }
 
 .btn-primary:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(254, 36, 110, 0.25);
+  box-shadow: 0 2px 8px rgba(242, 10, 120, 0.25);
 }
 
 .btn-secondary {
@@ -96,9 +108,9 @@
 }
 
 .btn-secondary:hover {
-  border-color: #fe246e;
-  color: #fe246e;
-  background-color: rgba(254, 36, 110, 0.04);
+  border-color: #f20a78;
+  color: #f20a78;
+  background-color: rgba(242, 10, 120, 0.04);
 }
 
 /* Respect user's motion preference */

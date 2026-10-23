@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, HelpCircle, ArrowRight } from 'lucide-react';
+import { SITE_CONFIG } from '../config/siteConfig';
 
 interface FAQItem {
   question: string;
@@ -13,39 +14,63 @@ export const FAQSection: React.FC = () => {
   const faqs: FAQItem[] = [
     {
       category: 'Platform Overview',
-      question: 'What is Skornet and what problems does it solve?',
+      question: 'What is SKORNET?',
       answer:
-        'Skornet is an industrial digital platform designed to connect the people, processes, and operations that power the HVAC service industry across India. It eliminates manual coordination bottlenecks, fragmented communication, and paper job sheets by bringing service demand, business operations, certified field technicians, and customer service delivery into one synchronized digital ecosystem.',
+        'SKORNET is a digital platform designed to connect the HVAC service ecosystem across India. It brings service businesses, certified field technicians, administrators, and customer service workflows into one connected digital environment—organizing technician verification, service-call dispatch, attendance tracking, and digital work history.',
     },
     {
-      category: 'Technician Network',
-      question: 'Who can join the Skornet technician and contractor network?',
+      category: 'Business Operations',
+      question: 'How does SKORNET help HVAC service businesses?',
       answer:
-        'Certified HVAC field technicians, maintenance engineers, HVAC service contractors, and facility engineering teams across India can join the network. Whether you are an experienced chiller plant specialist, VRV/VRF technician, or commercial ductable AC installer, Skornet provides direct access to verified service calls and structured operational workflows.',
+        'SKORNET provides service business owners with complete operational visibility. Owners can monitor assigned, pending, and completed service calls from a single dashboard, track GPS-validated technician attendance, calculate travel distance in kilometers, and review overtime, travel allowances, expenses, and call-based incentives without relying on scattered WhatsApp chats or paper sheets.',
+    },
+    {
+      category: 'Network Eligibility',
+      question: 'Who can join the SKORNET network?',
+      answer:
+        'The SKORNET network is open to HVAC field technicians, maintenance engineers, service contractors, and HVAC business owners. Whether you specialize in commercial chillers, VRF/VRV systems, AHUs, FCUs, packaged units, or residential air conditioning, SKORNET provides a structured environment to verify credentials, receive assignments, and coordinate operations.',
+    },
+    {
+      category: 'Onboarding & KYC',
+      question: 'How does technician verification work?',
+      answer:
+        'Technicians submit an onboarding application including full legal name, contact number, Aadhaar identity verification (held strictly confidential), service coverage area, years of industry experience, and specialized skill matrix along with trade licenses or certificates. Platform administrators verify these records before the technician is approved and associated with a service business organization.',
+    },
+    {
+      category: 'Call Management',
+      question: 'How are HVAC service calls assigned and tracked?',
+      answer:
+        'Service business owners or dispatchers assign service requests case-by-case based on the technician’s validated skill set, location, and availability. Technicians receive call details and appointment reminders directly on the mobile app. Call status progresses transparently through assigned, pending, and completed states, allowing real-time monitoring across the entire service lifecycle.',
+    },
+    {
+      category: 'Attendance & GPS',
+      question: 'Does SKORNET support GPS-based attendance?',
+      answer:
+        'Yes. Technicians record their daily login and check-out through the mobile application, where device GPS coordinates validate their attendance point. The platform also associates location data with service calls and calculates travel distance in kilometers, providing owners with audit-ready attendance history and objective data for travel allowance reviews.',
+    },
+    {
+      category: 'Digital Records',
+      question: 'How does SKORNET organize technician records?',
+      answer:
+        'SKORNET maintains a structured digital profile for every technician containing verified identity documents, KYC information, certified equipment proficiencies, and an ongoing digital work history of all completed service calls and repairs. These records remain centralized within the technician’s profile and the associated service organization.',
     },
     {
       category: 'Equipment Coverage',
-      question: 'What types of HVAC equipment and commercial systems are supported?',
+      question: 'Which HVAC equipment categories are relevant to SKORNET?',
       answer:
-        'Skornet supports all tiers of commercial, industrial, and residential HVAC infrastructure including water-cooled and air-cooled chillers, Variable Refrigerant Flow (VRF/VRV) systems, Air Handling Units (AHUs), Fan Coil Units (FCUs), rooftop packaged units, cooling towers, ventilation exhausts, and precision air conditioning (PAC) units.',
+        'SKORNET is structured around all major commercial, industrial, and residential HVAC equipment categories, including water-cooled and air-cooled Chillers, Variable Refrigerant Flow (VRF/VRV) systems, Air Handling Units (AHUs), Fan Coil Units (FCUs), Rooftop Packaged Units, Cooling Towers, Ventilation and Exhaust systems, and Precision Air Conditioning (PAC) units.',
     },
     {
-      category: 'Service Workflow',
-      question: 'How does the 5-stage digital service workflow operate?',
+      category: 'Registration Flow',
+      question: 'How can technicians and service businesses register?',
       answer:
-        'The workflow connects: (1) Service Request Management with centralized intake, (2) Intelligent Technician Work Assignment based on skill and location, (3) Synchronized Appointment Scheduling across dispatch and facility managers, (4) Real-Time Field Activity Tracking with attendance and job milestones, and (5) Permanent Digital Service Records with sign-offs and maintenance history.',
+        'Technicians and service businesses can register by submitting the official SKORNET registration form at https://forms.gle/J8Z223TY6iwuHT126. After providing required verification documents, skill matrix selections, and operational details, our team reviews the submission for platform onboarding and organizational association.',
     },
     {
-      category: 'Onboarding & Verification',
-      question: 'What verification details are required for technician onboarding?',
+      category: 'Data Privacy & Control',
+      question: 'How does SKORNET manage technician information?',
       answer:
-        'To ensure verified service quality and customer safety, onboarding technicians provide: Full Legal Name, Verified Phone Number, Aadhaar Identity Verification (held strictly confidential), Operational Coverage Address, Years of Industry Experience, Specialized Skill Matrix, Compensation Expectations, and Document/Certificate Upload.',
-    },
-    {
-      category: 'Privacy & Operations',
-      question: 'How does Skornet ensure data security and operational privacy?',
-      answer:
-        'Skornet employs enterprise-grade data protection standards. All identity records, verification details, facility addresses, and equipment service logs are securely stored and accessible strictly for verified operational dispatch, ensuring full compliance and customer confidentiality.',
+        'SKORNET manages technician information under strict organizational data isolation. A service business owner’s technician records, KYC details, and service histories are private to that organization and are never visible to competing owners. When personnel changes occur, technicians can be transferred between organizations in accordance with authorized owner and administrator governance rules.',
     },
   ];
 
@@ -53,72 +78,65 @@ export const FAQSection: React.FC = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const scrollToApplication = () => {
-    const el = document.getElementById('technician-application');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section id="faq" className="py-20 md:py-28 bg-white border-t border-[#E5E7EB]" aria-labelledby="faq-heading">
+    <section id="faq" className="py-20 md:py-28 bg-white border-t border-slate-200" aria-labelledby="faq-heading">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 md:mb-18">
           <div className="inline-flex items-center gap-2 mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FE246E]" aria-hidden="true" />
-            <span className="text-xs font-semibold tracking-wider uppercase text-[#4A4A4A]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#F20A78]" aria-hidden="true" />
+            <span className="text-xs font-semibold tracking-wider uppercase text-slate-600">
               Frequently Asked Questions
             </span>
           </div>
 
           <h2
             id="faq-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1A1A] tracking-tight leading-tight mb-5"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B162B] tracking-tight leading-tight mb-5"
           >
-            Questions & Operational Insights
+            Questions & Answers
           </h2>
 
-          <p className="text-base sm:text-lg text-[#4A4A4A] leading-relaxed">
-            Everything you need to know about the Skornet digital HVAC platform, technician verification, and service ecosystem coordination.
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Everything you need to know about the SKORNET platform, technician verification, dispatch workflows, and workforce management.
           </p>
         </div>
 
         {/* Interactive Accordion List */}
-        <div className="space-y-4 mb-14" role="region" aria-label="FAQ Accordion">
+        <div className="space-y-3.5 mb-14" role="region" aria-label="FAQ Accordion">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div
                 key={index}
-                className={`rounded-xl border transition-all duration-200 overflow-hidden ${
+                className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                   isOpen
-                    ? 'bg-[#F9FAFB] border-[#FE246E]/40 shadow-xs'
-                    : 'bg-white border-[#E5E7EB] hover:border-[#D1D5DB]'
+                    ? 'bg-[#F4F6FA] border-[#F20A78]/40 shadow-xs'
+                    : 'bg-white border-slate-200 hover:border-slate-300'
                 }`}
               >
                 <button
                   type="button"
                   onClick={() => toggleAccordion(index)}
-                  className="w-full text-left px-5 sm:px-7 py-5 flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FE246E]"
+                  className="w-full text-left px-5 sm:px-7 py-5 flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F20A78]"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                   id={`faq-question-${index}`}
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3">
-                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#FE246E] px-2 py-0.5 rounded bg-[#FE246E]/10 self-start">
+                    <span className="text-[11px] font-poppins font-semibold uppercase tracking-wider text-[#F20A78] px-2.5 py-0.5 rounded bg-[#F20A78]/10 self-start">
                       {faq.category}
                     </span>
-                    <h3 className="text-base sm:text-lg font-bold text-[#1A1A1A] leading-snug">
+                    <h3 className="text-base sm:text-lg font-bold text-[#0B162B] leading-snug">
                       {faq.question}
                     </h3>
                   </div>
                   <div
                     className={`shrink-0 p-1.5 rounded-full transition-transform duration-200 ${
                       isOpen
-                        ? 'rotate-180 bg-[#FE246E] text-white'
-                        : 'bg-[#F3F4F6] text-[#4A4A4A]'
+                        ? 'rotate-180 bg-[#F20A78] text-white'
+                        : 'bg-slate-100 text-slate-600'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -130,7 +148,7 @@ export const FAQSection: React.FC = () => {
                     id={`faq-answer-${index}`}
                     role="region"
                     aria-labelledby={`faq-question-${index}`}
-                    className="px-5 sm:px-7 pb-6 pt-1 text-sm sm:text-base text-[#4A4A4A] leading-relaxed border-t border-[#E5E7EB]/50"
+                    className="px-5 sm:px-7 pb-6 pt-2 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-200/50"
                   >
                     {faq.answer}
                   </div>
@@ -140,30 +158,31 @@ export const FAQSection: React.FC = () => {
           })}
         </div>
 
-        {/* Quick CTA Box */}
-        <div className="bg-[#F9FAFB] rounded-2xl p-6 sm:p-8 border border-[#E5E7EB] flex flex-col sm:flex-row items-center justify-between gap-6">
+        {/* Quick Help Card */}
+        <div className="bg-[#F4F6FA] rounded-2xl p-6 sm:p-8 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="p-3 rounded-xl bg-white border border-[#E5E7EB] text-[#FE246E] shadow-2xs">
+            <div className="p-3 rounded-xl bg-white border border-slate-200 text-[#F20A78] shadow-2xs">
               <HelpCircle className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-base sm:text-lg font-bold text-[#1A1A1A]">
-                Have a question not listed here?
+              <h4 className="text-base sm:text-lg font-bold text-[#0B162B]">
+                Ready to connect your HVAC operations?
               </h4>
-              <p className="text-xs sm:text-sm text-[#4A4A4A] mt-0.5">
-                Join our network or register your technician profile directly through our official form.
+              <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
+                Submit your technician profile or register your service business with SKORNET.
               </p>
             </div>
           </div>
 
-          <button
-            onClick={scrollToApplication}
-            type="button"
-            className="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm sm:text-base font-semibold cursor-pointer shrink-0"
+          <a
+            href={SITE_CONFIG.googleForm.directUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm sm:text-base font-semibold cursor-pointer shrink-0"
           >
-            <span>Submit Your Details</span>
+            <span>Register Now</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </a>
         </div>
 
       </div>

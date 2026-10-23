@@ -1,7 +1,7 @@
 {
   "name": "SKORNET",
   "short_name": "SKORNET",
-  "description": "SKORNET | Connecting the HVAC Service Ecosystem",
+  "description": "SKORNET | HVAC Service Management & Technician Network",
   "icons": [
     {
       "src": "/favicon-48x48.png",
@@ -24,8 +24,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#0d172a",
+  "background_color": "#0d172a",
   "display": "standalone",
   "start_url": "/"
 }

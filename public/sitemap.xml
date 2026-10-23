@@ -3,28 +3,33 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://skornet.in/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
+      <image:loc>https://skornet.in/images/skornet-hero.webp</image:loc>
+      <image:title>SKORNET Connected HVAC Service Ecosystem</image:title>
+      <image:caption>SKORNET connecting HVAC service businesses, field technicians, and operations on commercial rooftops</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://skornet.in/android-chrome-512x512.png</image:loc>
-      <image:title>Skornet HVAC Service Platform Logo</image:title>
-      <image:caption>Official Skornet Logo for Industrial HVAC Digital Platform</image:caption>
+      <image:title>SKORNET Official Logo</image:title>
+      <image:caption>Official SKORNET Logo for Industrial HVAC Digital Platform</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://skornet.in/Skornet.jpeg</image:loc>
-      <image:title>Skornet Commercial HVAC Service Ecosystem</image:title>
-      <image:caption>Connecting HVAC service demand, business operations, and certified technicians across India</image:caption>
+      <image:loc>https://skornet.in/images/industry-challenges.webp</image:loc>
+      <image:title>HVAC Service Operations Coordination</image:title>
+      <image:caption>Centralized operations monitoring and workforce dispatch for commercial HVAC</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://skornet.in/images/hero-technician.webp</image:loc>
-      <image:title>Commercial HVAC Field Technician</image:title>
-      <image:caption>Certified HVAC technician inspecting industrial air handling and chiller systems</image:caption>
+      <image:loc>https://skornet.in/images/connected-ecosystem.webp</image:loc>
+      <image:title>Connected HVAC Service Ecosystem</image:title>
+      <image:caption>Commercial plant room telemetry and field technician coordination</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://skornet.in/images/service-operations.webp</image:loc>
-      <image:title>HVAC Service Operations Workflow</image:title>
-      <image:caption>Digital workflow management for commercial heating, ventilation, and air conditioning maintenance</image:caption>
+      <image:title>Unbranded HVAC Service Operations Workflow</image:title>
+      <image:caption>Field service operations workflow from technician verification to service completion</image:caption>
     </image:image>
   </url>
 </urlset>

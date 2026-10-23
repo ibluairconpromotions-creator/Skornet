@@ -1,12 +1,16 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { IndustryChallenges } from './components/IndustryChallenges';
+import { IntroducingSkornet } from './components/IntroducingSkornet';
 import { ServiceWorkflow } from './components/ServiceWorkflow';
-import { ConnectedEcosystem } from './components/ConnectedEcosystem';
-import { OperationsInsights } from './components/OperationsInsights';
-import { BrandStatement } from './components/BrandStatement';
+import { PlatformCapabilities } from './components/PlatformCapabilities';
+import { StakeholderBenefits } from './components/StakeholderBenefits';
+import { EquipmentApplications } from './components/EquipmentApplications';
 import { FormSection } from './components/FormSection';
+import { DataTrust } from './components/DataTrust';
 import { FAQSection } from './components/FAQSection';
+import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
@@ -18,7 +22,7 @@ export const App: React.FC = () => {
   };
 
   const scrollToExplore = () => {
-    const el = document.getElementById('workflow');
+    const el = document.getElementById('challenges');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -26,36 +30,48 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      {/* Section 1: Minimal Navigation */}
+      {/* Navigation */}
       <Navbar onJoinClick={scrollToApplication} />
 
       <main className="flex-grow">
-        {/* Section 2: Split-layout Hero */}
+        {/* Section 1: Hero */}
         <Hero
           onJoinClick={scrollToApplication}
           onExploreClick={scrollToExplore}
         />
 
-        {/* Section 3: Bringing Every Stage of Service Together */}
+        {/* Section 2: Industry Challenges */}
+        <IndustryChallenges />
+
+        {/* Section 3: Introducing SKORNET */}
+        <IntroducingSkornet />
+
+        {/* Section 4: How SKORNET Works */}
         <ServiceWorkflow />
 
-        {/* Section 4: Connecting Businesses, Field Teams and Customers */}
-        <ConnectedEcosystem />
+        {/* Section 5: Platform Capabilities */}
+        <PlatformCapabilities />
 
-        {/* Section 5: Turning Operations into Useful Insights */}
-        <OperationsInsights />
+        {/* Section 6: Benefits by Stakeholder */}
+        <StakeholderBenefits />
 
-        {/* Section 6: Brand Statement */}
-        <BrandStatement />
+        {/* Section 7: HVAC Equipment & Applications */}
+        <EquipmentApplications />
 
-        {/* Section 7: Technician Information Collection CTA (Google Form) */}
+        {/* Section 8: Join the SKORNET Network */}
         <FormSection />
 
-        {/* Section 8: Frequently Asked Questions (SEO, AEO, and Knowledge Base) */}
+        {/* Section 9: Data Access and Trust */}
+        <DataTrust />
+
+        {/* Section 10: Frequently Asked Questions */}
         <FAQSection />
+
+        {/* Section 11: Final Call to Action */}
+        <FinalCTA />
       </main>
 
-      {/* Section 8: Professional Minimal Footer */}
+      {/* Section 12: Footer */}
       <Footer />
     </div>
   );

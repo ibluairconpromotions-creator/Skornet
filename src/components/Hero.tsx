@@ -12,12 +12,20 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
     <section id="hero" className="relative min-h-[720px] lg:min-h-[820px] xl:min-h-[880px] bg-[#0B162B] text-white pt-24 pb-14 lg:py-0 overflow-hidden flex items-center">
       {/* Merged Background Image Layer with edge-to-edge bleed and smooth gradient dissolves */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
-        <picture>
+        <picture
+          className="w-full h-full block"
+          style={{
+            maskImage:
+              'linear-gradient(90deg, transparent 0%, transparent 4%, rgba(0,0,0,0.4) 16%, rgba(0,0,0,0.9) 30%, black 45%, black 100%)',
+            WebkitMaskImage:
+              'linear-gradient(90deg, transparent 0%, transparent 4%, rgba(0,0,0,0.4) 16%, rgba(0,0,0,0.9) 30%, black 45%, black 100%)',
+          }}
+        >
           <source srcSet="/images/skornet-hero-bg.webp" type="image/webp" />
           <img
             src="/images/skornet-hero-bg.jpg"
             alt="SKORNET Connected HVAC Service Ecosystem"
-            className="w-full h-full object-cover object-[78%_center] sm:object-[75%_center] lg:object-[80%_center] xl:object-[82%_center] 2xl:object-right"
+            className="w-full h-full object-cover object-right"
             loading="eager"
             fetchPriority="high"
             width="1920"
@@ -50,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           className="absolute inset-0 w-full pointer-events-none z-1"
           style={{
             background:
-              'linear-gradient(90deg, #0B162B 0%, #0B162B 28%, rgba(11, 22, 43, 0.92) 40%, rgba(11, 22, 43, 0.70) 52%, rgba(11, 22, 43, 0.32) 66%, rgba(11, 22, 43, 0.08) 80%, transparent 92%)',
+              'linear-gradient(90deg, #0B162B 0%, #0B162B 22%, rgba(11, 22, 43, 0.95) 34%, rgba(11, 22, 43, 0.65) 46%, rgba(11, 22, 43, 0.20) 60%, transparent 74%)',
           }}
           aria-hidden="true"
         />

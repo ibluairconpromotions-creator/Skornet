@@ -172,7 +172,7 @@ export const IndustryChallenges: React.FC = () => {
         {/* The Opportunity: What If Everything Was Connected? */}
         <div className="bg-[#0B162B] text-white rounded-2xl p-6 sm:p-10 lg:p-12 border border-slate-800 shadow-xl relative overflow-hidden">
           <div
-            className="absolute top-0 right-0 w-80 h-80 bg-[#249FE8]/10 rounded-full blur-3xl pointer-events-none"
+            className="absolute top-0 right-0 w-80 h-80 bg-[#F20A78]/5 rounded-full blur-3xl pointer-events-none"
             aria-hidden="true"
           />
           <div className="max-w-3xl mb-8 relative z-10">

@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { IndustryChallenges } from './components/IndustryChallenges';
-import { IntroducingSkornet } from './components/IntroducingSkornet';
-import { ServiceWorkflow } from './components/ServiceWorkflow';
-import { PlatformCapabilities } from './components/PlatformCapabilities';
-import { StakeholderBenefits } from './components/StakeholderBenefits';
-import { EquipmentApplications } from './components/EquipmentApplications';
-import { FormSection } from './components/FormSection';
+import { AboutUs } from './components/AboutUs';
+import { WhatWeDo } from './components/WhatWeDo';
+import { ServiceOperations } from './components/ServiceOperations';
+import { FutureVision } from './components/FutureVision';
+import { WhoWeServe } from './components/WhoWeServe';
+import { WhySkornet } from './components/WhySkornet';
 import { DataTrust } from './components/DataTrust';
-import { FAQSection } from './components/FAQSection';
+import { MissionVision } from './components/MissionVision';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { SecurityGovernance } from './components/SecurityGovernance';
+import { SITE_CONFIG } from './config/siteConfig';
 
 const resolveRoute = (pathname: string, hash: string): string => {
   const path = pathname.toLowerCase().replace(/\/$/, '');
@@ -51,7 +51,7 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     if (currentPath === '/') {
-      document.title = 'SKORNET — Connecting the HVAC Service Ecosystem';
+      document.title = 'SKORNET — Connect. Verify. Manage. Grow.';
     }
   }, [currentPath]);
 
@@ -63,25 +63,12 @@ export const App: React.FC = () => {
     }
   };
 
-  const scrollToApplication = () => {
-    if (currentPath !== '/') {
-      navigateTo('/');
-      setTimeout(() => {
-        const el = document.getElementById('technician-application');
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-      return;
-    }
-    const el = document.getElementById('technician-application');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleJoinClick = () => {
+    window.open(SITE_CONFIG.googleForm.directUrl, '_blank', 'noopener,noreferrer');
   };
 
   const scrollToExplore = () => {
-    const el = document.getElementById('challenges');
+    const el = document.getElementById('about');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -91,7 +78,7 @@ export const App: React.FC = () => {
     return (
       <PrivacyPolicy
         onHomeClick={() => navigateTo('/')}
-        onJoinClick={scrollToApplication}
+        onJoinClick={handleJoinClick}
         onSecurityClick={() => navigateTo('/security-governance')}
       />
     );
@@ -101,62 +88,60 @@ export const App: React.FC = () => {
     return (
       <SecurityGovernance
         onHomeClick={() => navigateTo('/')}
-        onJoinClick={scrollToApplication}
+        onJoinClick={handleJoinClick}
         onPrivacyClick={() => navigateTo('/privacy-policy')}
       />
     );
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0B162B]">
-      {/* Navigation */}
+    <div className="min-h-screen flex flex-col bg-white text-slate-900">
+      {/* Navigation Bar */}
       <Navbar
-        onJoinClick={scrollToApplication}
+        onJoinClick={handleJoinClick}
         onHomeClick={() => navigateTo('/')}
       />
 
       <main className="flex-grow">
-        {/* Section 1: Hero */}
+        {/* Section 1: Home / Hero Section */}
         <Hero
-          onJoinClick={scrollToApplication}
+          onJoinClick={handleJoinClick}
           onExploreClick={scrollToExplore}
         />
 
-        {/* Section 2: Industry Challenges */}
-        <IndustryChallenges />
+        {/* Section 2: About Us */}
+        <AboutUs />
 
-        {/* Section 3: Introducing SKORNET */}
-        <IntroducingSkornet />
+        {/* Section 3: What We Do */}
+        <WhatWeDo />
 
-        {/* Section 4: How SKORNET Works */}
-        <ServiceWorkflow />
+        {/* Section 4: Our Service Operations */}
+        <ServiceOperations />
 
-        {/* Section 5: Platform Capabilities */}
-        <PlatformCapabilities />
+        {/* Section 5: Our Vision for the Future */}
+        <FutureVision />
 
-        {/* Section 6: Benefits by Stakeholder */}
-        <StakeholderBenefits />
+        {/* Section 6: Who We Serve */}
+        <WhoWeServe />
 
-        {/* Section 7: HVAC Equipment & Applications */}
-        <EquipmentApplications />
+        {/* Section 7: Why SKORNET */}
+        <WhySkornet />
 
-        {/* Section 8: Join the SKORNET Network */}
-        <FormSection />
-
-        {/* Section 9: Data Access and Trust */}
+        {/* Section 8: Building Trust Through Structured Information */}
         <DataTrust />
 
-        {/* Section 10: Frequently Asked Questions */}
-        <FAQSection />
+        {/* Section 9: Our Mission & Our Vision */}
+        <MissionVision />
 
-        {/* Section 11: Final Call to Action */}
+        {/* Section 10: Final Call to Action */}
         <FinalCTA />
       </main>
 
-      {/* Section 12: Footer with Resources & Legal and Contact */}
+      {/* Section 11: Footer */}
       <Footer
         onPrivacyClick={() => navigateTo('/privacy-policy')}
         onSecurityClick={() => navigateTo('/security-governance')}
+        onHomeClick={() => navigateTo('/')}
       />
     </div>
   );

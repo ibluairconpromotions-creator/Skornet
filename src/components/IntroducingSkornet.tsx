@@ -72,7 +72,8 @@ export const IntroducingSkornet: React.FC = () => {
   ];
 
   return (
-    <section id="platform" className="py-20 md:py-28 bg-white">
+    <section id="platform" className="py-20 md:py-28 bg-white relative">
+      <span id="introducing-skornet" className="sr-only" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -135,7 +136,7 @@ export const IntroducingSkornet: React.FC = () => {
         {/* The Connected Operating Model */}
         <div className="bg-[#0B162B] text-white rounded-2xl p-6 sm:p-10 lg:p-12 border border-slate-800 shadow-xl mb-16 relative overflow-hidden">
           <div
-            className="absolute -top-20 -right-20 w-80 h-80 bg-[#249FE8]/10 rounded-full blur-3xl pointer-events-none"
+            className="absolute -top-20 -right-20 w-80 h-80 bg-[#F20A78]/5 rounded-full blur-3xl pointer-events-none"
             aria-hidden="true"
           />
           <div className="max-w-3xl mb-10 text-center sm:text-left relative z-10">

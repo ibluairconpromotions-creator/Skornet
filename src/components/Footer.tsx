@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Mail, ExternalLink, ChevronRight } from 'lucide-react';
+import { ArrowUp, Mail, ExternalLink } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
 
 const currentYear = new Date().getFullYear();
@@ -7,9 +7,10 @@ const currentYear = new Date().getFullYear();
 interface FooterProps {
   onPrivacyClick?: () => void;
   onSecurityClick?: () => void;
+  onHomeClick?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onSecurityClick }) => {
+export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onSecurityClick, onHomeClick }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -18,12 +19,22 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onSecurityClick 
     <footer className="bg-[#0B162B] text-white border-t border-slate-800/80 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Main Footer Grid: Brand, Resources & Legal, Contact */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
           
-          {/* Brand Info & Tagline (5 cols) */}
-          <div className="sm:col-span-2 lg:col-span-5 space-y-4">
-            <a href="/" className="inline-block" aria-label="SKORNET Home">
+          {/* Brand Info & Tagline (7 cols) */}
+          <div className="md:col-span-7 space-y-4">
+            <a
+              href="/"
+              onClick={(e) => {
+                if (onHomeClick) {
+                  e.preventDefault();
+                  onHomeClick();
+                }
+              }}
+              className="inline-block"
+              aria-label="SKORNET Home"
+            >
               <picture>
                 <source srcSet="/skornet-logo-dark.webp" type="image/webp" />
                 <img
@@ -36,8 +47,8 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onSecurityClick 
               </picture>
             </a>
 
-            <p className="text-sm text-slate-300 max-w-sm leading-relaxed">
-              SKORNET brings HVAC service businesses, field technicians and service operations into one connected digital environment.
+            <p className="text-sm text-slate-300 max-w-lg leading-relaxed">
+              We are SKORNET — building a connected service ecosystem that brings businesses, skilled professionals, and customers together through smarter co-ordination, organized operations, and better service experiences.
             </p>
 
             <div className="pt-1 flex items-center gap-2 text-xs font-semibold text-[#F20A78]">
@@ -46,51 +57,12 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onSecurityClick 
             </div>
           </div>
 
-          {/* Navigation Menu: Resources & Legal (3 cols) */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-poppins uppercase tracking-wider text-slate-400 font-bold">
-              Resources & Legal
+          {/* Contact & Network (5 cols) */}
+          <div className="md:col-span-5 space-y-3">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold">
+              Contact & Registration
             </h4>
-            <ul className="space-y-2.5 text-sm text-slate-300">
-              <li>
-                <a
-                  href="/privacy-policy"
-                  onClick={(e) => {
-                    if (onPrivacyClick) {
-                      e.preventDefault();
-                      onPrivacyClick();
-                    }
-                  }}
-                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 cursor-pointer font-medium text-slate-200"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-[#F20A78]" />
-                  <span>Privacy Policy</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/security-governance"
-                  onClick={(e) => {
-                    if (onSecurityClick) {
-                      e.preventDefault();
-                      onSecurityClick();
-                    }
-                  }}
-                  className="hover:text-[#F20A78] transition-colors flex items-center gap-1 cursor-pointer font-medium text-slate-200"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-[#F20A78]" />
-                  <span>Security & Governance</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact & Network (4 cols) */}
-          <div className="lg:col-span-4 space-y-3">
-            <h4 className="text-xs font-poppins uppercase tracking-wider text-slate-400 font-bold">
-              Contact & Network
-            </h4>
-            <div className="flex flex-col space-y-2.5 text-sm text-slate-300">
+            <div className="flex flex-col space-y-3 text-sm text-slate-300">
               <a
                 href={`mailto:${SITE_CONFIG.contactEmail}`}
                 className="hover:text-white transition-colors flex items-center gap-2 text-slate-300"
@@ -102,13 +74,13 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onSecurityClick 
                 href={SITE_CONFIG.googleForm.directUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#F20A78] transition-colors flex items-center gap-1.5 text-[#F20A78] font-medium pt-1"
+                className="hover:text-white transition-colors flex items-center gap-1.5 text-[#F20A78] font-semibold"
               >
                 <span>Join the SKORNET Network</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
-              <p className="text-xs text-slate-400 leading-relaxed pt-2">
-                For enterprise partnerships, contractor onboarding, and verified technician dispatch inquiries across India.
+              <p className="text-xs text-slate-400 leading-relaxed pt-1">
+                Whether you are a service professional, a service business, or an organization looking for service support, SKORNET aims to build meaningful connections that help work move forward.
               </p>
             </div>
           </div>
@@ -118,7 +90,7 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onSecurityClick 
         {/* Bottom Bar: Copyright, Tagline, Legal Links, Back-to-Top */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            &copy; {currentYear} <span className="font-semibold text-slate-200">SKORNET</span>. All rights reserved. Designed by Popcix Creative Studio
+            &copy; {currentYear} <span className="font-semibold text-slate-200">SKORNET</span>. All rights reserved. Connect. Verify. Manage. Grow.
           </div>
 
           <div className="flex items-center gap-3 text-slate-400">

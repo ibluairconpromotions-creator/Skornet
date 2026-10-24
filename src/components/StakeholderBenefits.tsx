@@ -87,7 +87,8 @@ export const StakeholderBenefits: React.FC = () => {
   ];
 
   return (
-    <section id="benefits" className="py-20 md:py-28 bg-[#F4F6FA] border-t border-b border-slate-200">
+    <section id="benefits" className="py-20 md:py-28 bg-[#F4F6FA] border-t border-b border-slate-200 relative">
+      <span id="stakeholders" className="sr-only" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

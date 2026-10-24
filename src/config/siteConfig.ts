@@ -7,7 +7,6 @@
  * Palette sampled from Hero Reference:
  * - Deep navy: #0B162B
  * - Hot pink: #F20A78
- * - Electric blue: #249FE8
  * - Light grey: #F4F6FA
  * - White: #FFFFFF
  */
@@ -16,12 +15,12 @@ export const SITE_CONFIG = {
   companyName: 'SKORNET',
   brandName: 'SKORNET',
   domain: 'https://skornet.in',
-  eyebrow: 'THE CONNECTED HVAC ECOSYSTEM',
-  headline: 'Connecting the HVAC Service Ecosystem',
+  eyebrow: 'CONNECTED SERVICE ECOSYSTEM',
+  headline: 'Connecting Services. Powering a Smarter Service Ecosystem.',
   description:
-    'One connected platform for HVAC technicians, service businesses and field operations. Verify technician information, coordinate service calls and improve workforce visibility through structured digital workflows.',
-  tagline: 'Connect • Verify • Manage • Grow',
-  subTagline: 'One Platform for Every Technician, Service Call and Business Operation.',
+    'We are SKORNET — building a connected service ecosystem that brings businesses, skilled professionals, and customers together through smarter co-ordination, organized operations, and better service experiences.',
+  tagline: 'Connect. Verify. Manage. Grow.',
+  subTagline: 'Connecting services, powering a smarter service ecosystem.',
   contactEmail: 'contact@skornet.in',
 
   brandColors: {
@@ -31,7 +30,6 @@ export const SITE_CONFIG = {
     charcoalDark: '#1A1A1A',
     pink: '#F20A78',
     pinkHover: '#D8086A',
-    electricBlue: '#249FE8',
     white: '#FFFFFF',
     bgLight: '#F4F6FA',
     border: '#E5E7EB',

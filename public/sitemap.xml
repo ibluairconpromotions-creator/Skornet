@@ -3,44 +3,29 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://skornet.in/</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://skornet.in/images/skornet-hero.webp</image:loc>
-      <image:title>SKORNET Connected HVAC Service Ecosystem</image:title>
-      <image:caption>SKORNET connecting HVAC service businesses, field technicians, and operations on commercial rooftops</image:caption>
+      <image:loc>https://skornet.in/images/skornet-hero-bg.webp</image:loc>
+      <image:title>SKORNET Connected Service Ecosystem</image:title>
+      <image:caption>Connecting Services. Powering a Smarter Service Ecosystem.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://skornet.in/android-chrome-512x512.png</image:loc>
+      <image:loc>https://skornet.in/skornet-logo.png</image:loc>
       <image:title>SKORNET Official Logo</image:title>
-      <image:caption>Official SKORNET Logo for Industrial HVAC Digital Platform</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://skornet.in/images/industry-challenges.webp</image:loc>
-      <image:title>HVAC Service Operations Coordination</image:title>
-      <image:caption>Centralized operations monitoring and workforce dispatch for commercial HVAC</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://skornet.in/images/connected-ecosystem.webp</image:loc>
-      <image:title>Connected HVAC Service Ecosystem</image:title>
-      <image:caption>Commercial plant room telemetry and field technician coordination</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://skornet.in/images/service-operations.webp</image:loc>
-      <image:title>Unbranded HVAC Service Operations Workflow</image:title>
-      <image:caption>Field service operations workflow from technician verification to service completion</image:caption>
+      <image:caption>Official SKORNET Logo</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://skornet.in/privacy-policy</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://skornet.in/security-governance</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

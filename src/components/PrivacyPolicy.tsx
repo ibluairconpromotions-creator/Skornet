@@ -27,13 +27,16 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onHomeClick, onJoi
             className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F20A78] rounded cursor-pointer"
             aria-label="SKORNET Home"
           >
-            <img
-              src="/skornet-logo-dark.png"
-              alt="SKORNET"
-              className="h-9 sm:h-11 w-auto object-contain"
-              width="180"
-              height="42"
-            />
+            <picture>
+              <source srcSet="/skornet-logo-transparent.webp" type="image/webp" />
+              <img
+                src="/skornet-logo-transparent.png"
+                alt="SKORNET"
+                className="h-9 sm:h-11 w-auto object-contain"
+                width="180"
+                height="42"
+              />
+            </picture>
           </button>
 
           <div className="flex items-center gap-3">
@@ -65,7 +68,7 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onHomeClick, onJoi
           aria-hidden="true"
         />
         <div
-          className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-[#249FE8]/10 rounded-full blur-3xl pointer-events-none"
+          className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-[#F20A78]/5 rounded-full blur-3xl pointer-events-none"
           aria-hidden="true"
         />
 
@@ -218,7 +221,7 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onHomeClick, onJoi
 
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
                 <div className="flex items-center gap-2 text-slate-900 font-semibold text-sm mb-1.5">
-                  <Database className="w-4 h-4 text-[#249FE8]" />
+                  <Database className="w-4 h-4 text-[#F20A78]" />
                   <span>Strict Role-Based Access</span>
                 </div>
                 <p className="text-xs text-slate-600">

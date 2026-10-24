@@ -18,11 +18,17 @@ Allow: /favicon.ico
 Allow: /favicon-*.png
 Allow: /skornet-favicon.png
 
-# AI Answer Engines (AEO & GEO Optimization)
+# AI Answer Engines & Generative Search Engines (AEO & GEO Optimization)
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 User-agent: ClaudeBot
@@ -41,6 +47,15 @@ User-agent: Applebot-Extended
 Allow: /
 
 User-agent: Bingbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
 Allow: /
 
 Sitemap: https://skornet.in/sitemap.xml

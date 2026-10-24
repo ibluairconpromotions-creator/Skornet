@@ -1,0 +1,160 @@
+import React from 'react';
+import { 
+  Wrench, 
+  Settings, 
+  ShieldCheck, 
+  Building2, 
+  Cpu, 
+  Wind, 
+  Clock, 
+  ArrowRight,
+  ClipboardList
+} from 'lucide-react';
+import { SITE_CONFIG } from '../config/siteConfig';
+
+export const WhatWeDo: React.FC = () => {
+  const acServices = [
+    {
+      title: 'AC Installation and Commissioning',
+      desc: 'Precision setup, piping, testing, and initial commissioning for new and replacement units.',
+      icon: Wrench
+    },
+    {
+      title: 'AC Repair and Breakdown Support',
+      desc: 'Rapid diagnostics, electrical troubleshooting, leak detection, and compressor repair support.',
+      icon: Settings
+    },
+    {
+      title: 'Preventive Maintenance and Servicing',
+      desc: 'Scheduled filter cleaning, coil disinfection, pressure balancing, and system health checks.',
+      icon: ShieldCheck
+    },
+    {
+      title: 'Residential and Commercial AC Services',
+      desc: 'Tailored service programs covering individual homes, multi-story apartments, retail, and offices.',
+      icon: Building2
+    },
+    {
+      title: 'VRF/VRV System Services',
+      desc: 'Specialized diagnostic, inverter circuit testing, refnet inspection, and modular maintenance.',
+      icon: Cpu
+    },
+    {
+      title: 'Ductable, Cassette & Commercial Systems',
+      desc: 'Full-spectrum servicing for central plants, ducted packages, cassette units, and air handling equipment.',
+      icon: Wind
+    },
+    {
+      title: 'Service Coordination & Maintenance Support',
+      desc: 'End-to-end operational dispatch, AMC scheduling, service tracking, and work documentation.',
+      icon: Clock
+    }
+  ];
+
+  return (
+    <section id="what-we-do" className="py-24 lg:py-32 bg-slate-50/60 text-slate-900 border-t border-slate-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="max-w-3xl mb-16 lg:mb-20">
+          <span className="text-xs font-semibold uppercase tracking-wider text-[#F20A78] mb-3 block">
+            Specialized Services
+          </span>
+
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight leading-[1.15] mb-5">
+            AC Services Backed by Organized Operations
+          </h2>
+
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+            AC services are at the heart of our existing business. We support air-conditioning service requirements with an emphasis on coordination, professional execution, and effective service management.
+          </p>
+        </div>
+
+        {/* 7 AC Services Cards Grid - Clean Minimalist Style */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {acServices.map((service, idx) => {
+            const Icon = service.icon;
+            const indexStr = idx < 9 ? `0${idx + 1}` : `${idx + 1}`;
+            return (
+              <div 
+                key={idx}
+                className="p-7 rounded-2xl bg-white border border-slate-200/70 hover:border-slate-300 hover:shadow-sm transition-all duration-200 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-11 h-11 rounded-xl bg-pink-50 text-[#F20A78] flex items-center justify-center">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <span className="text-xs font-medium text-slate-400">
+                      {indexStr}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-base font-bold text-slate-900 mb-2 leading-snug">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    {service.desc}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* 8th Card: Network Registration CTA */}
+          <div className="p-7 rounded-2xl bg-[#0B162B] text-white flex flex-col justify-between shadow-xs">
+            <div>
+              <div className="w-11 h-11 rounded-xl bg-white/10 text-[#F20A78] flex items-center justify-center mb-5">
+                <ClipboardList className="w-5 h-5" />
+              </div>
+
+              <h3 className="text-base font-bold text-white mb-2 leading-snug">
+                Need AC Service Support?
+              </h3>
+              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                Register with SKORNET to coordinate field assignments, manage service calls, or request certified technicians.
+              </p>
+            </div>
+            
+            <a
+              href={SITE_CONFIG.googleForm.directUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#F20A78] hover:bg-[#D8086A] text-white text-sm font-semibold transition-all"
+            >
+              <span>Join the Network</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+
+        {/* Operational Foundation Callout - Clean Minimalist Card */}
+        <div className="rounded-2xl p-8 sm:p-10 bg-white border border-slate-200/80 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div className="max-w-3xl">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#F20A78] mb-2 block">
+              Operational Foundation
+            </span>
+            <h4 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+              Managing the Entire Process End-to-End
+            </h4>
+            <p className="text-base text-slate-600 leading-relaxed font-normal">
+              Beyond the service itself, we recognize the importance of managing the entire process—from receiving a request to assigning the right professional, coordinating fieldwork, tracking progress, and maintaining service records. This operational foundation is an important part of how we work today and how we plan to grow.
+            </p>
+          </div>
+
+          <a
+            href={SITE_CONFIG.googleForm.directUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white whitespace-nowrap shadow-xs"
+          >
+            <span>Request or Provide Service</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
+};

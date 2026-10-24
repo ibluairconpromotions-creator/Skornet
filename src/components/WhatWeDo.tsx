@@ -52,25 +52,35 @@ export const WhatWeDo: React.FC = () => {
   ];
 
   return (
-    <section id="what-we-do" className="py-24 lg:py-32 bg-slate-50/60 text-slate-900 border-t border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="what-we-do" className="relative py-20 lg:py-28 bg-[#0B162B] text-white overflow-hidden border-t border-slate-800/80">
+      {/* Background ambient lighting glows */}
+      <div
+        className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[35rem] h-[22rem] bg-[#F20A78]/10 rounded-full blur-3xl pointer-events-none"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute bottom-1/4 right-1/4 w-[30rem] h-[20rem] bg-[#F20A78]/5 rounded-full blur-3xl pointer-events-none"
+        aria-hidden="true"
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 lg:mb-20">
+        <div className="max-w-3xl mb-14 lg:mb-18">
           <span className="text-xs font-semibold uppercase tracking-wider text-[#F20A78] mb-3 block">
             Specialized Services
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black tracking-tight leading-[1.15] mb-5">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15] mb-5">
             AC Services Backed by Organized Operations
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
             AC services are at the heart of our existing business. We support air-conditioning service requirements with an emphasis on coordination, professional execution, and effective service management.
           </p>
         </div>
 
-        {/* 7 AC Services Cards Grid - Clean Minimalist Style */}
+        {/* 7 AC Services Cards Grid + 1 CTA Card */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {acServices.map((service, idx) => {
             const Icon = service.icon;
@@ -78,23 +88,23 @@ export const WhatWeDo: React.FC = () => {
             return (
               <div 
                 key={idx}
-                className="p-7 rounded-2xl bg-white border border-slate-200/70 hover:border-slate-300 hover:shadow-sm transition-all duration-200 flex flex-col justify-between"
+                className="p-7 rounded-2xl bg-[#111D36] border border-slate-800 hover:border-slate-700 hover:bg-[#142342] hover:shadow-lg hover:shadow-black/20 transition-all duration-200 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-11 h-11 rounded-xl bg-pink-50 text-[#F20A78] flex items-center justify-center">
+                    <div className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 text-[#F20A78] flex items-center justify-center">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-xs font-medium text-slate-400">
+                    <span className="text-xs font-medium text-slate-500">
                       {indexStr}
                     </span>
                   </div>
                   
-                  <h3 className="text-base font-bold text-slate-900 mb-2 leading-snug">
+                  <h3 className="text-base font-bold text-white mb-2 leading-snug">
                     {service.title}
                   </h3>
 
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <p className="text-sm text-slate-300 leading-relaxed font-normal">
                     {service.desc}
                   </p>
                 </div>
@@ -103,16 +113,16 @@ export const WhatWeDo: React.FC = () => {
           })}
 
           {/* 8th Card: Network Registration CTA */}
-          <div className="p-7 rounded-2xl bg-[#0B162B] text-white flex flex-col justify-between shadow-xs">
+          <div className="p-7 rounded-2xl bg-gradient-to-br from-[#162544] to-[#111D36] border border-[#F20A78]/40 shadow-[0_0_25px_rgba(242,10,120,0.12)] text-white flex flex-col justify-between">
             <div>
-              <div className="w-11 h-11 rounded-xl bg-white/10 text-[#F20A78] flex items-center justify-center mb-5">
+              <div className="w-11 h-11 rounded-xl bg-[#F20A78]/15 border border-[#F20A78]/30 text-[#F20A78] flex items-center justify-center mb-5">
                 <ClipboardList className="w-5 h-5" />
               </div>
 
               <h3 className="text-base font-bold text-white mb-2 leading-snug">
                 Need AC Service Support?
               </h3>
-              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+              <p className="text-sm text-slate-300 leading-relaxed mb-6 font-normal">
                 Register with SKORNET to coordinate field assignments, manage service calls, or request certified technicians.
               </p>
             </div>
@@ -121,7 +131,7 @@ export const WhatWeDo: React.FC = () => {
               href={SITE_CONFIG.googleForm.directUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#F20A78] hover:bg-[#D8086A] text-white text-sm font-semibold transition-all"
+              className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#F20A78] hover:bg-[#D8086A] text-white text-sm font-semibold transition-all shadow-[0_8px_20px_rgba(242,10,120,0.35)]"
             >
               <span>Join the Network</span>
               <ArrowRight className="w-4 h-4" />
@@ -129,16 +139,16 @@ export const WhatWeDo: React.FC = () => {
           </div>
         </div>
 
-        {/* Operational Foundation Callout - Clean Minimalist Card */}
-        <div className="rounded-2xl p-8 sm:p-10 bg-white border border-slate-200/80 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        {/* Operational Foundation Callout */}
+        <div className="rounded-2xl p-8 sm:p-10 bg-[#111D36] border border-slate-800 hover:border-slate-700/80 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div className="max-w-3xl">
             <span className="text-xs font-semibold uppercase tracking-wider text-[#F20A78] mb-2 block">
               Operational Foundation
             </span>
-            <h4 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+            <h4 className="text-xl sm:text-2xl font-bold text-white mb-3">
               Managing the Entire Process End-to-End
             </h4>
-            <p className="text-base text-slate-600 leading-relaxed font-normal">
+            <p className="text-base text-slate-300 leading-relaxed font-normal">
               Beyond the service itself, we recognize the importance of managing the entire process—from receiving a request to assigning the right professional, coordinating fieldwork, tracking progress, and maintaining service records. This operational foundation is an important part of how we work today and how we plan to grow.
             </p>
           </div>
@@ -147,7 +157,7 @@ export const WhatWeDo: React.FC = () => {
             href={SITE_CONFIG.googleForm.directUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white whitespace-nowrap shadow-xs"
+            className="btn-primary shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white whitespace-nowrap shadow-[0_8px_20px_rgba(242,10,120,0.35)]"
           >
             <span>Request or Provide Service</span>
             <ArrowRight className="w-4 h-4" />

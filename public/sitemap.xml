@@ -16,6 +16,11 @@
       <image:title>SKORNET Official Logo</image:title>
       <image:caption>Official SKORNET Logo</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/skornet-favicon.png</image:loc>
+      <image:title>SKORNET Brand Icon</image:title>
+      <image:caption>SKORNET Connected Service Ecosystem Brand Icon</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://skornet.in/privacy-policy</loc>

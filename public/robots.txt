@@ -17,6 +17,8 @@ Allow: /
 Allow: /favicon.ico
 Allow: /favicon-*.png
 Allow: /skornet-favicon.png
+Allow: /android-chrome-*.png
+Allow: /apple-touch-icon.png
 
 # AI Answer Engines & Generative Search Engines (AEO & GEO Optimization)
 User-agent: GPTBot

@@ -16,9 +16,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           className="w-full h-full block"
           style={{
             maskImage:
-              'linear-gradient(90deg, transparent 0%, transparent 4%, rgba(0,0,0,0.4) 16%, rgba(0,0,0,0.9) 30%, black 45%, black 100%)',
+              'linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.5) 8%, black 22%, black 100%)',
             WebkitMaskImage:
-              'linear-gradient(90deg, transparent 0%, transparent 4%, rgba(0,0,0,0.4) 16%, rgba(0,0,0,0.9) 30%, black 45%, black 100%)',
+              'linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.5) 8%, black 22%, black 100%)',
           }}
         >
           <source srcSet="/images/skornet-hero-bg.webp" type="image/webp" />
@@ -28,8 +28,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
             className="w-full h-full object-cover object-right"
             loading="eager"
             fetchPriority="high"
-            width="1920"
-            height="1080"
+            width="2560"
+            height="1440"
           />
         </picture>
 
@@ -43,22 +43,24 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           aria-hidden="true"
         />
 
-        {/* Subtle background tech grid overlay */}
+        {/* Subtle background tech grid overlay — visible on text side (left) alone, masked away from artwork */}
         <div
-          className="absolute inset-0 pointer-events-none opacity-[0.03]"
+          className="absolute inset-y-0 left-0 w-full max-w-2xl pointer-events-none opacity-[0.04]"
           style={{
             backgroundImage: `linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)`,
             backgroundSize: '40px 40px',
+            maskImage: 'linear-gradient(90deg, black 0%, black 50%, transparent 95%)',
+            WebkitMaskImage: 'linear-gradient(90deg, black 0%, black 50%, transparent 95%)',
           }}
           aria-hidden="true"
         />
 
-        {/* Luxuriously smooth, multi-stop soft-edge gradient dissolve blending seamlessly from deep #0B162B into the hero artwork */}
+        {/* Smooth, soft-gradient effect blending seamlessly from deep #0B162B into the crystal-clear hero artwork */}
         <div
           className="absolute inset-0 w-full pointer-events-none z-1"
           style={{
             background:
-              'linear-gradient(90deg, #0B162B 0%, #0B162B 22%, rgba(11, 22, 43, 0.95) 34%, rgba(11, 22, 43, 0.65) 46%, rgba(11, 22, 43, 0.20) 60%, transparent 74%)',
+              'linear-gradient(90deg, #0B162B 0%, #0B162B 18%, rgba(11, 22, 43, 0.85) 30%, rgba(11, 22, 43, 0.40) 42%, rgba(11, 22, 43, 0.05) 54%, transparent 64%)',
           }}
           aria-hidden="true"
         />

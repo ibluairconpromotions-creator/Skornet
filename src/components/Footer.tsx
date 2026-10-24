@@ -90,7 +90,7 @@ export const Footer: React.FC<FooterProps> = ({ onPrivacyClick, onSecurityClick,
         {/* Bottom Bar: Copyright, Tagline, Legal Links, Back-to-Top */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            &copy; {currentYear} <span className="font-semibold text-slate-200">SKORNET</span>. All rights reserved. Connect. Verify. Manage. Grow.
+            &copy; {currentYear} <span className="font-semibold text-slate-200">SKORNET</span>. All rights reserved. Designed by Popcix Creative Studio
           </div>
 
           <div className="flex items-center gap-3 text-slate-400">

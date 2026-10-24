@@ -72,12 +72,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="max-w-xl lg:max-w-[32rem] xl:max-w-[35rem] py-8 sm:py-12 lg:py-24 xl:py-28">
           
-          {/* Eyebrow / Tagline Pill */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#111D36]/80 border border-slate-700/80 mb-5 text-xs font-semibold tracking-wider uppercase text-slate-300">
-            <span className="w-2 h-2 rounded-full bg-[#F20A78] animate-pulse" />
-            <span>Connect. Verify. Manage. Grow.</span>
-          </div>
-
           {/* Large, bold, highly readable H1 headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[3.15rem] font-extrabold text-white tracking-tight leading-[1.12] mb-5 drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
             Connecting Services. Powering a Smarter Service Ecosystem.

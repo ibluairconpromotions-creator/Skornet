@@ -3,13 +3,38 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://skornet.in/</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://skornet.in/images/skornet-hero-bg.webp</image:loc>
       <image:title>SKORNET Connected Service Ecosystem</image:title>
       <image:caption>Connecting Services. Powering a Smarter Service Ecosystem.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/images/about-connected-team.webp</image:loc>
+      <image:title>SKORNET Connected Field Workforce</image:title>
+      <image:caption>Skilled Indian service professionals and field engineers connected through SKORNET operations</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/images/ac-technician-maintenance.webp</image:loc>
+      <image:title>SKORNET Precision AC Maintenance</image:title>
+      <image:caption>HVAC technician conducting digital telemetry inspection and maintenance on air conditioning equipment</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/images/service-operations-dispatch.webp</image:loc>
+      <image:title>SKORNET Live Dispatch &amp; Operations Hub</image:title>
+      <image:caption>Service operations coordinators tracking real-time technician routes and assignment schedules</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/images/facility-maintenance-commercial.webp</image:loc>
+      <image:title>SKORNET Commercial &amp; Industrial Facility Maintenance</image:title>
+      <image:caption>Cross-disciplinary facility engineers inspecting building electrical and mechanical infrastructure</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/images/who-we-serve-ecosystem.webp</image:loc>
+      <image:title>SKORNET Verified Customer &amp; Technician Trust</image:title>
+      <image:caption>Customer welcoming verified field technician with digital job sign-off and service confirmation</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://skornet.in/skornet-logo.png</image:loc>
@@ -24,14 +49,14 @@
   </url>
   <url>
     <loc>https://skornet.in/privacy-policy</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://skornet.in/security-governance</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>

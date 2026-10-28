@@ -51,13 +51,28 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
 User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
 Allow: /
 
 User-agent: cohere-ai
 Allow: /
 
 User-agent: Diffbot
+Allow: /
+
+User-agent: Bytespider
 Allow: /
 
 Sitemap: https://skornet.in/sitemap.xml

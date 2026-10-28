@@ -51,7 +51,7 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     if (currentPath === '/') {
-      document.title = 'SKORNET — Connect. Verify. Manage. Grow.';
+      document.title = 'SKORNET | Connected Service Ecosystem — Connect. Verify. Manage. Grow.';
     }
   }, [currentPath]);
 

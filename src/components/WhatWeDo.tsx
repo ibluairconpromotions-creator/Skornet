@@ -139,29 +139,77 @@ export const WhatWeDo: React.FC = () => {
           </div>
         </div>
 
-        {/* Operational Foundation Callout */}
-        <div className="rounded-2xl p-8 sm:p-10 bg-[#111D36] border border-slate-800 hover:border-slate-700/80 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div className="max-w-3xl">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#F20A78] mb-2 block">
-              Operational Foundation
-            </span>
-            <h4 className="text-xl sm:text-2xl font-bold text-white mb-3">
-              Managing the Entire Process End-to-End
-            </h4>
-            <p className="text-base text-slate-300 leading-relaxed font-normal">
-              Beyond the service itself, we recognize the importance of managing the entire process—from receiving a request to assigning the right professional, coordinating fieldwork, tracking progress, and maintaining service records. This operational foundation is an important part of how we work today and how we plan to grow.
-            </p>
+        {/* Operational Foundation Callout with Visual Asset */}
+        <div className="rounded-2xl overflow-hidden bg-[#111D36] border border-slate-800 hover:border-slate-700/80 shadow-2xl grid grid-cols-1 lg:grid-cols-12 items-stretch">
+          {/* Left Column: Image */}
+          <div className="lg:col-span-5 relative min-h-[260px] sm:min-h-[320px] lg:min-h-full overflow-hidden group">
+            <picture className="w-full h-full block">
+              <source srcSet="/images/ac-technician-maintenance.webp" type="image/webp" />
+              <img
+                src="/images/ac-technician-maintenance.jpg"
+                alt="Young Indian HVAC technician in unbranded uniform conducting digital telemetry inspection on air conditioning unit"
+                className="w-full h-full min-h-[260px] object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                loading="lazy"
+                decoding="async"
+                width="1280"
+                height="720"
+              />
+            </picture>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#111D36] via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#111D36] pointer-events-none" />
+            <div className="absolute bottom-3 left-4 right-4 lg:bottom-4 lg:left-4 text-white">
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#F20A78] drop-shadow-sm block">
+                Precision Field Execution
+              </span>
+              <p className="text-xs text-slate-200 drop-shadow-sm mt-0.5">
+                Real-time diagnostics & verified service checklists.
+              </p>
+            </div>
           </div>
 
-          <a
-            href={SITE_CONFIG.googleForm.directUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white whitespace-nowrap shadow-[0_8px_20px_rgba(242,10,120,0.35)]"
-          >
-            <span>Request or Provide Service</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          {/* Right Column: Content */}
+          <div className="lg:col-span-7 p-8 sm:p-10 flex flex-col justify-between">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#F20A78] mb-2 block">
+                Operational Foundation
+              </span>
+              <h4 className="text-xl sm:text-2xl font-bold text-white mb-3">
+                Managing the Entire Process End-to-End
+              </h4>
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal mb-6">
+                Beyond the service itself, we recognize the importance of managing the entire process—from receiving a request to assigning the right professional, coordinating fieldwork, tracking progress, and maintaining service records. This operational foundation is an important part of how we work today and how we plan to grow.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+                <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                  <p className="text-xs font-semibold text-white">Diagnostic Precision</p>
+                  <p className="text-[11px] text-slate-400 mt-0.5">Component-level telemetry</p>
+                </div>
+                <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                  <p className="text-xs font-semibold text-white">Verified Records</p>
+                  <p className="text-[11px] text-slate-400 mt-0.5">Digital completion logs</p>
+                </div>
+                <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                  <p className="text-xs font-semibold text-white">Fast Dispatch</p>
+                  <p className="text-[11px] text-slate-400 mt-0.5">Organized technician routing</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <span className="text-xs text-slate-400">
+                Ready to partner or need service support?
+              </span>
+              <a
+                href={SITE_CONFIG.googleForm.directUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white shadow-[0_8px_20px_rgba(242,10,120,0.35)]"
+              >
+                <span>Request or Provide Service</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>

@@ -81,6 +81,66 @@ export const WhoWeServe: React.FC = () => {
           })}
         </div>
 
+        {/* Collaborative Ecosystem Showcase Banner */}
+        <div className="rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/90 shadow-sm mb-16 grid grid-cols-1 lg:grid-cols-12 items-stretch">
+          <div className="lg:col-span-6 relative min-h-[280px] sm:min-h-[340px] overflow-hidden group">
+            <picture className="w-full h-full block">
+              <source srcSet="/images/who-we-serve-ecosystem.webp" type="image/webp" />
+              <img
+                src="/images/who-we-serve-ecosystem.jpg"
+                alt="Young Indian customer welcoming verified professional service technician with digital tablet confirmation"
+                className="w-full h-full min-h-[280px] object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                loading="lazy"
+                decoding="async"
+                width="1280"
+                height="720"
+              />
+            </picture>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B162B]/75 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-3 left-4 right-4 text-white">
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#F20A78] drop-shadow-sm block">
+                Trust & Verification
+              </span>
+              <p className="text-xs text-slate-100 font-medium drop-shadow-sm mt-0.5">
+                Clear digital sign-offs for transparent customer-technician relations.
+              </p>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 p-7 sm:p-9 flex flex-col justify-between">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#F20A78] mb-2 block">
+                Ecosystem Synergy
+              </span>
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                Bridging the Gap Between People, Work, and Trust
+              </h3>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+                By providing transparent job tracking, verified professional profiles, and structured communication, SKORNET ensures that customers receive dependable service while technicians and service businesses gain the tools they need to operate and grow with confidence.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="p-3.5 rounded-xl bg-white border border-slate-200/70 shadow-2xs">
+                  <p className="text-xs font-bold text-slate-900">Customer Peace of Mind</p>
+                  <p className="text-[11px] text-slate-500 mt-1">Verified professionals with clear service history.</p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-white border border-slate-200/70 shadow-2xs">
+                  <p className="text-xs font-bold text-slate-900">Organized Fieldwork</p>
+                  <p className="text-[11px] text-slate-500 mt-1">Direct job scopes, navigation, and digital checklists.</p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-white border border-slate-200/70 shadow-2xs">
+                  <p className="text-xs font-bold text-slate-900">Business Control</p>
+                  <p className="text-[11px] text-slate-500 mt-1">Real-time team visibility and job assignment tracking.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-500">
+              Connecting service consumers and field teams through structured digital accountability.
+            </div>
+          </div>
+        </div>
+
         {/* Section Outro */}
         <div className="text-center max-w-2xl mx-auto pt-8 border-t border-slate-100">
           <p className="text-base sm:text-lg text-slate-800 font-medium">

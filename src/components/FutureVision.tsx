@@ -156,12 +156,12 @@ export const FutureVision: React.FC = () => {
           })}
         </div>
 
-        {/* 7th Category: Redesigned Commercial & Industrial Facility Maintenance (Split Asymmetric Layout) */}
-        <div className="rounded-3xl bg-white border border-slate-200/80 shadow-xs p-8 sm:p-12 mb-10">
+        {/* 7th Category: Redesigned Commercial & Industrial Facility Maintenance */}
+        <div className="rounded-3xl bg-white border border-slate-200/80 shadow-xs p-7 sm:p-10 lg:p-12 mb-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            {/* Left Side: Overview & Target Facilities */}
-            <div className="lg:col-span-5 space-y-6">
+            {/* Left Side: Overview, Facility Scopes & Photo Asset */}
+            <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-50 text-[#F20A78] text-xs font-semibold">
                 <Building2 className="w-4 h-4" />
                 <span>Enterprise & Facility Scale</span>
@@ -177,7 +177,7 @@ export const FutureVision: React.FC = () => {
               </div>
 
               {/* Target Facility Scopes */}
-              <div className="pt-2">
+              <div>
                 <span className="text-xs uppercase tracking-wider font-semibold text-slate-400 block mb-3">
                   Managed Environments
                 </span>
@@ -192,22 +192,47 @@ export const FutureVision: React.FC = () => {
                   ))}
                 </div>
               </div>
+
+              {/* Photo Asset */}
+              <div className="rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm bg-white group relative">
+                <picture className="block relative overflow-hidden">
+                  <source srcSet="/images/facility-maintenance-commercial.webp" type="image/webp" />
+                  <img
+                    src="/images/facility-maintenance-commercial.jpg"
+                    alt="Young Indian facility engineers inspecting commercial building mechanical and electrical systems with digital diagnostic tablet"
+                    className="w-full h-56 sm:h-64 object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                    loading="lazy"
+                    decoding="async"
+                    width="1280"
+                    height="720"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B162B]/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-3 left-4 right-4 text-white">
+                    <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#F20A78] drop-shadow-sm block">
+                      Facility Engineering & Inspection
+                    </span>
+                    <p className="text-xs text-slate-200 drop-shadow-sm mt-0.5">
+                      Cross-disciplinary maintenance for high-value building assets.
+                    </p>
+                  </div>
+                </picture>
+              </div>
             </div>
 
             {/* Right Side: 2x2 Clean Capability Grid */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {commercialCapabilities.map((cap, cIdx) => {
                 const CapIcon = cap.icon;
                 return (
                   <div 
                     key={cIdx}
-                    className="p-5 rounded-2xl bg-slate-50/70 border border-slate-200/70 hover:bg-white hover:border-slate-300 hover:shadow-xs transition-all duration-200 flex flex-col justify-between"
+                    className="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/70 hover:bg-white hover:border-slate-300 hover:shadow-xs transition-all duration-200 flex flex-col justify-between"
                   >
                     <div>
-                      <div className="w-10 h-10 rounded-xl bg-white border border-slate-200/70 text-[#F20A78] flex items-center justify-center mb-3.5 shadow-2xs">
+                      <div className="w-10 h-10 rounded-xl bg-white border border-slate-200/70 text-[#F20A78] flex items-center justify-center mb-4 shadow-2xs">
                         <CapIcon className="w-5 h-5" />
                       </div>
-                      <h4 className="text-base font-bold text-slate-900 mb-1.5 leading-snug">
+                      <h4 className="text-base font-bold text-slate-900 mb-2 leading-snug">
                         {cap.title}
                       </h4>
                       <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">

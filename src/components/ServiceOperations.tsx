@@ -67,6 +67,58 @@ export const ServiceOperations: React.FC = () => {
           </p>
         </div>
 
+        {/* Visual Coordination Showcase Panel */}
+        <div className="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-xl mb-16 grid grid-cols-1 lg:grid-cols-12 items-stretch">
+          <div className="lg:col-span-7 relative min-h-[260px] sm:min-h-[360px] overflow-hidden group">
+            <picture className="w-full h-full block">
+              <source srcSet="/images/service-operations-dispatch.webp" type="image/webp" />
+              <img
+                src="/images/service-operations-dispatch.jpg"
+                alt="Young Indian operations manager and field technician coordinating real-time service assignments on dispatch dashboard"
+                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                loading="lazy"
+                decoding="async"
+                width="1280"
+                height="720"
+              />
+            </picture>
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-slate-900 pointer-events-none" />
+          </div>
+
+          <div className="lg:col-span-5 p-7 sm:p-9 bg-slate-900 text-white flex flex-col justify-between">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#F20A78] mb-2 block">
+                Centralized Operations Hub
+              </span>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-3">
+                Live Dispatch & Workforce Synchronization
+              </h3>
+              <p className="text-slate-300 text-sm leading-relaxed mb-6 font-normal">
+                Every service engagement is managed through a structured digital workflow—connecting customer requests with verified field professionals, tracking real-time status updates, and logging comprehensive records from start to finish.
+              </p>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                  <div className="w-2 h-2 rounded-full bg-[#F20A78] shrink-0" />
+                  <p className="text-xs text-slate-200"><strong className="text-white">Verified Profiles:</strong> Verified onboarding & identity</p>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                  <div className="w-2 h-2 rounded-full bg-[#F20A78] shrink-0" />
+                  <p className="text-xs text-slate-200"><strong className="text-white">Active Dispatch:</strong> Rapid, transparent assignment coordination</p>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                  <div className="w-2 h-2 rounded-full bg-[#F20A78] shrink-0" />
+                  <p className="text-xs text-slate-200"><strong className="text-white">Audited Logs:</strong> Digital records & operational visibility</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400">
+              Coordinating field technicians across commercial and residential sites.
+            </div>
+          </div>
+        </div>
+
         {/* 6 Operations Steps Grid - Clean Minimalist Style */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {operations.map((op, idx) => {

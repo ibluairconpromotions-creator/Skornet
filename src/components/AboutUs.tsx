@@ -120,7 +120,7 @@ export const AboutUs: React.FC = () => {
                 <source srcSet="/images/about-connected-team.webp" type="image/webp" />
                 <img
                   src="/images/about-connected-team.jpg"
-                  alt="Young Indian service professionals and field engineers connected through SKORNET operations"
+                  alt="Multi-skilled Indian service professionals, electricians, digital telemetry technicians, and facilities engineers connected through SKORNET operations"
                   className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
                   loading="lazy"
                   decoding="async"
@@ -133,7 +133,7 @@ export const AboutUs: React.FC = () => {
                     Connected Field Workforce
                   </span>
                   <p className="text-xs sm:text-sm text-slate-100 font-medium drop-shadow-sm mt-0.5">
-                    Uniting skilled technicians, operational teams, and customer expectations.
+                    Uniting skilled multi-trade technicians, operational teams, and customer expectations.
                   </p>
                 </div>
               </picture>

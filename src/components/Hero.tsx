@@ -60,7 +60,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           className="absolute inset-0 w-full pointer-events-none z-1"
           style={{
             background:
-              'linear-gradient(90deg, #0B162B 0%, #0B162B 18%, rgba(11, 22, 43, 0.85) 30%, rgba(11, 22, 43, 0.40) 42%, rgba(11, 22, 43, 0.05) 54%, transparent 64%)',
+              'linear-gradient(90deg, #0B162B 0%, #0B162B 24%, rgba(11, 22, 43, 0.75) 30%, rgba(11, 22, 43, 0.15) 36%, transparent 42%)',
           }}
           aria-hidden="true"
         />

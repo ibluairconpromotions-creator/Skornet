@@ -13,13 +13,13 @@
     </image:image>
     <image:image>
       <image:loc>https://skornet.in/images/about-connected-team.webp</image:loc>
-      <image:title>SKORNET Connected Field Workforce</image:title>
-      <image:caption>Skilled Indian service professionals and field engineers connected through SKORNET operations</image:caption>
+      <image:title>SKORNET Connected Multi-Trade Workforce</image:title>
+      <image:caption>Multi-skilled Indian service professionals, electricians, digital telemetry technicians, and facilities engineers connected through SKORNET operations</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://skornet.in/images/ac-technician-maintenance.webp</image:loc>
-      <image:title>SKORNET Precision AC Maintenance</image:title>
-      <image:caption>HVAC technician conducting digital telemetry inspection and maintenance on air conditioning equipment</image:caption>
+      <image:loc>https://skornet.in/images/field-service-diagnostics.webp</image:loc>
+      <image:title>SKORNET Field Service Diagnostics &amp; Telemetry</image:title>
+      <image:caption>Skilled field technician conducting digital telemetry inspection and smart diagnostic check on technical distribution systems</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://skornet.in/images/service-operations-dispatch.webp</image:loc>
@@ -30,6 +30,36 @@
       <image:loc>https://skornet.in/images/facility-maintenance-commercial.webp</image:loc>
       <image:title>SKORNET Commercial &amp; Industrial Facility Maintenance</image:title>
       <image:caption>Cross-disciplinary facility engineers inspecting building electrical and mechanical infrastructure</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/images/roadmap-electrical.webp</image:loc>
+      <image:title>SKORNET Electrical Services</image:title>
+      <image:caption>Certified professional electrician inspecting electrical distribution panel with digital multimeter</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/images/roadmap-plumbing.webp</image:loc>
+      <image:title>SKORNET Plumbing Services</image:title>
+      <image:caption>Professional plumber servicing high-grade copper piping, drainage valves, and water systems</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/images/roadmap-appliances.webp</image:loc>
+      <image:title>SKORNET Home Appliance Services</image:title>
+      <image:caption>Home appliance specialist servicing smart refrigerator and kitchen appliances with digital tablet</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/images/roadmap-carpentry.webp</image:loc>
+      <image:title>SKORNET Carpentry &amp; Handyman Services</image:title>
+      <image:caption>Skilled carpenter and handyman fitting solid wood cabinetry and door fixtures with precision tools</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/images/roadmap-painting.webp</image:loc>
+      <image:title>SKORNET Painting &amp; Property Maintenance</image:title>
+      <image:caption>Professional painter applying precision interior paint with extension roller and clean finish</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skornet.in/images/roadmap-cleaning.webp</image:loc>
+      <image:title>SKORNET Professional Cleaning Services</image:title>
+      <image:caption>Deep cleaning professional operating commercial floor scrubber in pristine corporate lobby</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://skornet.in/images/who-we-serve-ecosystem.webp</image:loc>

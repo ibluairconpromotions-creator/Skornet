@@ -144,10 +144,10 @@ export const WhatWeDo: React.FC = () => {
           {/* Left Column: Image */}
           <div className="lg:col-span-5 relative min-h-[260px] sm:min-h-[320px] lg:min-h-full overflow-hidden group">
             <picture className="w-full h-full block">
-              <source srcSet="/images/ac-technician-maintenance.webp" type="image/webp" />
+              <source srcSet="/images/field-service-diagnostics.webp" type="image/webp" />
               <img
-                src="/images/ac-technician-maintenance.jpg"
-                alt="Young Indian HVAC technician in unbranded uniform conducting digital telemetry inspection on air conditioning unit"
+                src="/images/field-service-diagnostics.jpg"
+                alt="Skilled Indian field technician in unbranded uniform conducting digital telemetry inspection and smart diagnostic check on technical distribution systems"
                 className="w-full h-full min-h-[260px] object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
                 loading="lazy"
                 decoding="async"
@@ -161,7 +161,7 @@ export const WhatWeDo: React.FC = () => {
                 Precision Field Execution
               </span>
               <p className="text-xs text-slate-200 drop-shadow-sm mt-0.5">
-                Real-time diagnostics & verified service checklists.
+                Real-time diagnostics & verified multi-point checklists.
               </p>
             </div>
           </div>

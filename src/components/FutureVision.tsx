@@ -20,6 +20,10 @@ export const FutureVision: React.FC = () => {
     {
       title: 'Electrical Services',
       icon: Zap,
+      image: '/images/roadmap-electrical.webp',
+      fallbackImage: '/images/roadmap-electrical.jpg',
+      alt: 'Certified professional electrician inspecting electrical distribution panel with digital multimeter',
+      badge: 'Electrical Systems',
       items: [
         'Electrical installation and repair',
         'Wiring, lighting, switches, and electrical troubleshooting',
@@ -29,6 +33,10 @@ export const FutureVision: React.FC = () => {
     {
       title: 'Plumbing Services',
       icon: Droplets,
+      image: '/images/roadmap-plumbing.webp',
+      fallbackImage: '/images/roadmap-plumbing.jpg',
+      alt: 'Professional plumber servicing high-grade copper piping, drainage valves, and water systems',
+      badge: 'Plumbing & Water',
       items: [
         'Plumbing installation and repairs',
         'Pipe leakage and drainage solutions',
@@ -38,6 +46,10 @@ export const FutureVision: React.FC = () => {
     {
       title: 'Home Appliance Services',
       icon: Tv,
+      image: '/images/roadmap-appliances.webp',
+      fallbackImage: '/images/roadmap-appliances.jpg',
+      alt: 'Home appliance specialist servicing smart refrigerator and kitchen appliances with digital tablet',
+      badge: 'Household & Kitchen',
       items: [
         'Refrigerator and washing machine servicing',
         'Kitchen appliance repairs',
@@ -47,6 +59,10 @@ export const FutureVision: React.FC = () => {
     {
       title: 'Carpentry and Handyman Services',
       icon: Hammer,
+      image: '/images/roadmap-carpentry.webp',
+      fallbackImage: '/images/roadmap-carpentry.jpg',
+      alt: 'Skilled carpenter and handyman fitting solid wood cabinetry and door fixtures with precision tools',
+      badge: 'Woodwork & Fixtures',
       items: [
         'Furniture assembly and repairs',
         'Door, lock, hinge, and fixture maintenance',
@@ -56,6 +72,10 @@ export const FutureVision: React.FC = () => {
     {
       title: 'Painting and Property Maintenance',
       icon: Paintbrush,
+      image: '/images/roadmap-painting.webp',
+      fallbackImage: '/images/roadmap-painting.jpg',
+      alt: 'Professional painter applying precision interior paint with extension roller and clean finish',
+      badge: 'Surfaces & Coating',
       items: [
         'Interior and exterior painting',
         'Wall repairs and surface maintenance',
@@ -65,6 +85,10 @@ export const FutureVision: React.FC = () => {
     {
       title: 'Cleaning Services',
       icon: Sparkles,
+      image: '/images/roadmap-cleaning.webp',
+      fallbackImage: '/images/roadmap-cleaning.jpg',
+      alt: 'Deep cleaning professional operating commercial floor scrubber in pristine corporate lobby',
+      badge: 'Sanitization & Deep Clean',
       items: [
         'Home and office cleaning',
         'Deep cleaning for kitchens and bathrooms',
@@ -121,35 +145,62 @@ export const FutureVision: React.FC = () => {
           </div>
         </div>
 
-        {/* Categories Grid - 6 Standard Cards */}
+        {/* Categories Grid - 6 Standard Cards with Real Images */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {standardCategories.map((cat, idx) => {
             const Icon = cat.icon;
             return (
               <div 
                 key={idx}
-                className="p-8 rounded-2xl bg-white border border-slate-200/70 hover:border-slate-300 hover:shadow-sm transition-all duration-200 flex flex-col justify-between"
+                className="rounded-2xl bg-white border border-slate-200/80 hover:border-slate-300 hover:shadow-md transition-all duration-300 flex flex-col justify-between overflow-hidden group"
               >
                 <div>
-                  <div className="w-11 h-11 rounded-xl bg-pink-50 text-[#F20A78] flex items-center justify-center mb-5">
-                    <Icon className="w-5 h-5" />
+                  {/* Real Image Header */}
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100 border-b border-slate-100">
+                    <picture className="w-full h-full block">
+                      <source srcSet={cat.image} type="image/webp" />
+                      <img
+                        src={cat.fallbackImage}
+                        alt={cat.alt}
+                        className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
+                        width="1376"
+                        height="768"
+                      />
+                    </picture>
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent opacity-90 group-hover:opacity-75 transition-opacity" />
+                    
+                    <div className="absolute top-3 right-3">
+                      <span className="text-[11px] font-semibold text-white/95 bg-slate-900/70 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 shadow-xs">
+                        {cat.badge}
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-3 left-4 right-4 flex items-center gap-2.5">
+                      <div className="w-9 h-9 rounded-xl bg-white/95 backdrop-blur-md text-[#F20A78] flex items-center justify-center shrink-0 shadow-sm">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <h3 className="text-base sm:text-lg font-bold text-white drop-shadow-sm tracking-tight leading-tight">
+                        {cat.title}
+                      </h3>
+                    </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight">
-                    {cat.title}
-                  </h3>
-
-                  <ul className="space-y-2.5">
-                    {cat.items.map((item, itemIdx) => (
-                      <li 
-                        key={itemIdx} 
-                        className="flex items-start gap-2.5 text-sm text-slate-600 leading-relaxed"
-                      >
-                        <CheckCircle2 className="w-4 h-4 text-[#F20A78] shrink-0 mt-1" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Body Content */}
+                  <div className="p-6">
+                    <ul className="space-y-2.5">
+                      {cat.items.map((item, itemIdx) => (
+                        <li 
+                          key={itemIdx} 
+                          className="flex items-start gap-2.5 text-sm text-slate-600 leading-relaxed"
+                        >
+                          <CheckCircle2 className="w-4 h-4 text-[#F20A78] shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             );

@@ -247,9 +247,9 @@ export const FutureVision: React.FC = () => {
               {/* Photo Asset */}
               <div className="rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm bg-white group relative">
                 <picture className="block relative overflow-hidden">
-                  <source srcSet="/images/facility-maintenance-commercial.webp" type="image/webp" />
+                  <source srcSet="/images/facility-maintenance-commercial.webp?v=3" type="image/webp" />
                   <img
-                    src="/images/facility-maintenance-commercial.jpg"
+                    src="/images/facility-maintenance-commercial.jpg?v=3"
                     alt="Young Indian facility engineers inspecting commercial building mechanical and electrical systems with digital diagnostic tablet"
                     className="w-full h-56 sm:h-64 object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"

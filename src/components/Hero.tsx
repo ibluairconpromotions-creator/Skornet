@@ -21,9 +21,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
               'linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.5) 8%, black 22%, black 100%)',
           }}
         >
-          <source srcSet="/images/skornet-hero-bg.webp" type="image/webp" />
+          <source srcSet="/images/skornet-hero-bg.webp?v=3" type="image/webp" />
           <img
-            src="/images/skornet-hero-bg.jpg"
+            src="/images/skornet-hero-bg.jpg?v=3"
             alt="SKORNET Connected HVAC Service Ecosystem"
             className="w-full h-full object-cover object-right"
             loading="eager"
@@ -55,12 +55,12 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           aria-hidden="true"
         />
 
-        {/* Smooth, soft-gradient effect blending seamlessly from deep #0B162B into the crystal-clear hero artwork */}
+        {/* Smooth, soft-gradient effect blending seamlessly from deep #0B162B across the link line into the hero artwork */}
         <div
           className="absolute inset-0 w-full pointer-events-none z-1"
           style={{
             background:
-              'linear-gradient(90deg, #0B162B 0%, #0B162B 24%, rgba(11, 22, 43, 0.75) 30%, rgba(11, 22, 43, 0.15) 36%, transparent 42%)',
+              'linear-gradient(90deg, #0B162B 0%, #0B162B 36%, rgba(11, 22, 43, 0.90) 46%, rgba(11, 22, 43, 0.55) 56%, rgba(11, 22, 43, 0.15) 66%, transparent 76%)',
           }}
           aria-hidden="true"
         />
